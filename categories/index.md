@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Categories
-description: Explore technology, IT, networking, Linux and cybersecurity topics published by Zvirox.
+description: Explore technology, IT, networking, Linux, cybersecurity, AI and voice AI topics published by Zvirox.
 ---
 
 <div class="zv-container">
@@ -108,6 +108,24 @@ description: Explore technology, IT, networking, Linux and cybersecurity topics 
 
         <a
           href="{{ '/categories/technology/' | relative_url }}"
+          class="zv-section-link"
+        >
+          Explore →
+        </a>
+
+      {% elsif category_slug == "ai" %}
+
+        <a
+          href="{{ '/categories/ai/' | relative_url }}"
+          class="zv-section-link"
+        >
+          Explore →
+        </a>
+
+      {% elsif category_slug == "voice-ai" %}
+
+        <a
+          href="{{ '/categories/voice-ai/' | relative_url }}"
           class="zv-section-link"
         >
           Explore →

@@ -1162,6 +1162,288 @@ html[data-theme="light"] .zv-header {
 
 
 /* =========================================================
+   AI SECTION — DESIGN TOKENS
+   Inspired by VoiceStudio (dark surfaces, adoption stats)
+   and Kilo AI (brand-primary accents, utility patterns)
+   ========================================================= */
+
+/* AI category accent colors */
+:root {
+  --zv-ai-purple: #8b5cf6;
+  --zv-ai-purple-dark: #7c3aed;
+  --zv-ai-purple-soft: rgba(139, 92, 246, 0.12);
+  --zv-voice-bg: #141414;
+  --zv-voice-border: rgba(255, 255, 255, 0.08);
+  --zv-kilo-brand: #0e0e0e;
+  --zv-kilo-accent: #28c840;
+}
+
+/* AI card variant — purple accent, dark surface */
+.zv-card-ai {
+  overflow: hidden;
+  background: var(--zv-surface);
+  border: 1px solid var(--zv-border);
+  border-radius: var(--zv-radius);
+  transition:
+    transform var(--zv-transition),
+    border-color var(--zv-transition),
+    box-shadow var(--zv-transition);
+}
+
+.zv-card-ai:hover {
+  border-color: var(--zv-ai-purple);
+  box-shadow: var(--zv-shadow-hover);
+  transform: translateY(-3px);
+}
+
+.zv-card-ai .zv-card-category {
+  color: var(--zv-ai-purple);
+}
+
+.zv-card-ai .zv-card-title a:hover {
+  color: var(--zv-ai-purple);
+}
+
+/* AI hero section — dark, gradient accent */
+.zv-hero-ai {
+  position: relative;
+  margin-top: 30px;
+  padding: 80px 52px;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 75% 40%,
+      var(--zv-ai-purple-soft),
+      transparent 35%
+    ),
+    var(--zv-surface);
+  border: 1px solid var(--zv-border);
+  border-radius: var(--zv-radius-lg);
+}
+
+.zv-hero-ai h1 {
+  margin: 0 0 22px;
+  font-size: clamp(42px, 5vw, 68px);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+  font-weight: 800;
+}
+
+.zv-hero-ai h1 span {
+  color: var(--zv-ai-purple);
+}
+
+.zv-hero-ai p {
+  max-width: 680px;
+  margin: 0 0 34px;
+  color: var(--zv-text-secondary);
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+/* Screenshot gallery — VoiceStudio inspired */
+.zv-screenshot-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 32px 0;
+}
+
+.zv-screenshot-item {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--zv-bg-secondary);
+  border: 1px solid var(--zv-border);
+  border-radius: var(--zv-radius-sm);
+  position: relative;
+  cursor: pointer;
+  transition: transform var(--zv-transition);
+}
+
+.zv-screenshot-item:hover {
+  transform: scale(1.02);
+}
+
+.zv-screenshot-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 300ms ease;
+}
+
+.zv-screenshot-item:hover img {
+  transform: scale(1.05);
+}
+
+.zv-screenshot-label {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
+  padding: 4px 8px;
+  background: rgba(7, 10, 13, 0.85);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 4px;
+  text-align: center;
+  z-index: 10;
+}
+
+/* Comparison table — VoiceStudio vs ElevenLabs style */
+.zv-comparison-table {
+  width: 100%;
+  margin: 32px 0;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.zv-comparison-table th,
+.zv-comparison-table td {
+  padding: 12px 14px;
+  border: 1px solid var(--zv-border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.zv-comparison-table th {
+  background: var(--zv-surface);
+  color: var(--zv-text);
+  font-weight: 700;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.zv-comparison-table tr:nth-child(even) td {
+  background: var(--zv-bg-secondary);
+}
+
+.zv-comparison-table tr:hover td {
+  background: var(--zv-surface-hover);
+}
+
+/* Trust bar — Kilo AI inspired */
+.zv-trust-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 32px 0;
+  border-top: 1px solid var(--zv-border);
+  border-bottom: 1px solid var(--zv-border);
+  margin: 48px 0;
+}
+
+.zv-trust-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.zv-trust-stat .zv-trust-value {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--zv-text);
+  letter-spacing: -0.02em;
+}
+
+.zv-trust-stat .zv-trust-label {
+  font-size: 12px;
+  color: var(--zv-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Install command block — VoiceStudio / Kilo CLI style */
+.zv-install-block {
+  background: var(--zv-code-bg);
+  border: 1px solid var(--zv-border);
+  border-radius: var(--zv-radius);
+  padding: 20px;
+  margin: 24px 0;
+  overflow-x: auto;
+}
+
+.zv-install-block pre {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+.zv-install-block code {
+  display: block;
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: var(--zv-text);
+  font-family: var(--zv-font-mono);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.zv-install-hint {
+  margin-top: 8px;
+  color: var(--zv-text-muted);
+  font-size: 13px;
+}
+
+/* FAQ accordion — Kilo AI inspired */
+.zv-faq-accordion {
+  margin: 40px 0;
+}
+
+.zv-faq-item {
+  border: 1px solid var(--zv-border);
+  border-radius: var(--zv-radius-sm);
+  margin-bottom: 8px;
+  overflow: hidden;
+  transition: border-color var(--zv-transition);
+}
+
+.zv-faq-item:hover {
+  border-color: var(--zv-border-light);
+}
+
+.zv-faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: transparent;
+  border: none;
+  text-align: left;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--zv-text);
+  cursor: pointer;
+  transition: color var(--zv-transition);
+}
+
+.zv-faq-question:hover {
+  color: var(--zv-ai-purple);
+}
+
+.zv-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  color: var(--zv-text-secondary);
+  font-size: 14px;
+  line-height: 1.7;
+  transition: max-height 300ms ease, padding 300ms ease;
+}
+
+.zv-faq-answer p {
+  margin: 0 0 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--zv-border-light);
+}
+
+/* =========================================================
    ARTICLE / POST
    ========================================================= */
 

@@ -171,6 +171,50 @@ description: Practical technology, IT, networking and cybersecurity tutorials an
 
 
   <!-- =====================================================
+       AI HERO SECTION
+       ===================================================== -->
+
+  <section class="zv-hero-ai">
+
+    <div class="zv-hero-content">
+
+      <div class="zv-card-category">
+        AI • VOICE AI • LOCAL AI
+      </div>
+
+      <h1>
+        Run AI on your
+        <span>own terms.</span>
+      </h1>
+
+      <p>
+        Privacy-first AI tools, local voice cloning, AI coding agents,
+        and model-agnostic development — all running on your own hardware.
+      </p>
+
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+
+        <a
+          href="{{ '/categories/ai/' | relative_url }}"
+          class="zv-button zv-button-primary"
+        >
+          Explore AI
+        </a>
+
+        <a
+          href="{{ '/categories/voice-ai/' | relative_url }}"
+          class="zv-button zv-button-secondary"
+        >
+          Voice AI
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =====================================================
        TOPICS
        ===================================================== -->
 
@@ -293,6 +337,64 @@ description: Practical technology, IT, networking and cybersecurity tutorials an
 
           <a
             href="{{ '/categories/it/' | relative_url }}"
+            class="zv-section-link"
+          >
+            Explore →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="zv-card zv-card-ai">
+
+        <div class="zv-card-body">
+
+          <div class="zv-card-category">
+            AI
+          </div>
+
+          <h3 class="zv-card-title">
+            Artificial Intelligence
+          </h3>
+
+          <p class="zv-card-excerpt">
+            AI coding agents, model routing, local AI deployment,
+            and privacy-first machine learning workflows.
+          </p>
+
+          <a
+            href="{{ '/categories/ai/' | relative_url }}"
+            class="zv-section-link"
+          >
+            Explore →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="zv-card zv-card-ai">
+
+        <div class="zv-card-body">
+
+          <div class="zv-card-category">
+            Voice AI
+          </div>
+
+          <h3 class="zv-card-title">
+            Voice AI
+          </h3>
+
+          <p class="zv-card-excerpt">
+            Local voice cloning, text-to-speech, video dubbing,
+            and audio AI that keeps your data private.
+          </p>
+
+          <a
+            href="{{ '/categories/voice-ai/' | relative_url }}"
             class="zv-section-link"
           >
             Explore →
