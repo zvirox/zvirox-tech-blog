@@ -2,71 +2,80 @@
 ---
 
 /* =========================================================
-   ZVIROX — CYBER DEFENDER
-   Global Design System
+   ZVIROX — TECH BLOG (VoiceStudio Inspired)
+   Modern Developer-Focused Design System
    ========================================================= */
 
 /* ---------------------------------------------------------
-   DESIGN TOKENS
+   DESIGN TOKENS (VoiceStudio Aesthetic)
    --------------------------------------------------------- */
 
 :root {
-  /* Brand */
-  --zv-red: #ff2633;
-  --zv-red-dark: #d71926;
-  --zv-red-soft: rgba(255, 38, 51, 0.12);
+  /* Brand Colors - VoiceStudio inspired pink/magenta */
+  --zv-primary: #ff50a6;
+  --zv-primary-dark: #e44595;
+  --zv-primary-soft: rgba(255, 80, 166, 0.15);
+  --zv-primary-glow: 0 0 20px rgba(255, 80, 166, 0.4);
 
-  /* Dark theme */
-  --zv-bg: #070a0d;
-  --zv-bg-secondary: #0b0f13;
-  --zv-surface: #0e1318;
-  --zv-surface-hover: #121920;
-  --zv-border: #202830;
-  --zv-border-light: #29323b;
+  /* Dark Theme - VoiceStudio near-black backgrounds */
+  --zv-bg: #0a0a0a;
+  --zv-bg-secondary: #121212;
+  --zv-surface: #1a1a1a;
+  --zv-surface-hover: #252525;
+  --zv-border: #2d2d2d;
+  --zv-border-light: #3a3a3a;
 
   /* Text */
-  --zv-text: #f2f5f7;
-  --zv-text-secondary: #c0c8cf;
-  --zv-text-muted: #89939c;
+  --zv-text: #f0f0f0;
+  --zv-text-secondary: #b0b0b0;
+  --zv-text-muted: #888888;
+
+  /* Accent colors */
+  --zv-accent-blue: #50a0ff;
+  --zv-accent-green: #4ade80;
+  --zv-accent-purple: #a855f7;
+  --zv-accent-orange: #ff9550;
 
   /* Code */
-  --zv-code-bg: #0a0e12;
+  --zv-code-bg: #111111;
+  --zv-code-border: #2a2a2a;
 
   /* Effects */
-  --zv-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-  --zv-shadow-hover: 0 16px 40px rgba(0, 0, 0, 0.35);
+  --zv-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  --zv-shadow-hover: 0 12px 35px rgba(0, 0, 0, 0.7);
+  --zv-glow: 0 0 0 1px rgba(255, 80, 166, 0.2);
 
   /* Layout */
-  --zv-container: 1380px;
-  --zv-content: 920px;
+  --zv-container: 1280px;
+  --zv-content: 900px;
 
-  /* Radius */
-  --zv-radius-sm: 6px;
-  --zv-radius: 10px;
-  --zv-radius-lg: 14px;
+  /* Radius - VoiceStudio rounded corners */
+  --zv-radius-sm: 8px;
+  --zv-radius: 12px;
+  --zv-radius-lg: 16px;
+  --zv-radius-full: 9999px;
 
-  /* Typography */
+  /* Typography - Modern developer sans-serif */
   --zv-font-sans:
-    Inter,
-    ui-sans-serif,
     -apple-system,
     BlinkMacSystemFont,
     "Segoe UI",
-    Roboto,
-    Helvetica,
-    Arial,
+    "Roboto",
+    "Inter",
+    "SF Pro Display",
+    system-ui,
     sans-serif;
 
   --zv-font-mono:
     "JetBrains Mono",
-    "Fira Code",
     "SFMono-Regular",
-    Consolas,
-    "Liberation Mono",
+    "Cascadia Code",
+    "Fira Code",
+    "Roboto Mono",
     monospace;
 
   /* Motion */
-  --zv-transition: 180ms ease;
+  --zv-transition: 200ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -76,22 +85,22 @@
    --------------------------------------------------------- */
 
 html[data-theme="light"] {
-  --zv-bg: #ffffff;
-  --zv-bg-secondary: #f6f7f8;
+  --zv-bg: #f8fafc;
+  --zv-bg-secondary: #ffffff;
   --zv-surface: #ffffff;
-  --zv-surface-hover: #f3f4f5;
+  --zv-surface-hover: #f1f5f9;
 
-  --zv-border: #e1e5e8;
-  --zv-border-light: #d5dade;
+  --zv-border: #e2e8f0;
+  --zv-border-light: #cbd5e1;
 
-  --zv-text: #101419;
-  --zv-text-secondary: #46505a;
-  --zv-text-muted: #6d7780;
+  --zv-text: #0f172a;
+  --zv-text-secondary: #475569;
+  --zv-text-muted: #64748b;
 
-  --zv-code-bg: #f3f5f6;
+  --zv-code-bg: #f1f5f9;
 
-  --zv-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
-  --zv-shadow-hover: 0 14px 35px rgba(15, 23, 42, 0.12);
+  --zv-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --zv-shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 
@@ -155,7 +164,7 @@ select {
    --------------------------------------------------------- */
 
 ::selection {
-  background: var(--zv-red);
+  background: var(--zv-primary);
   color: #ffffff;
 }
 
@@ -178,7 +187,7 @@ select {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--zv-red);
+  background: var(--zv-primary);
 }
 
 
@@ -291,7 +300,7 @@ html[data-theme="light"] .zv-header {
 
   height: 2px;
 
-  background: var(--zv-red);
+  background: var(--zv-primary);
 }
 
 
@@ -328,7 +337,7 @@ html[data-theme="light"] .zv-header {
 }
 
 .zv-icon-button:hover {
-  border-color: var(--zv-red);
+  border-color: var(--zv-primary);
   background: var(--zv-surface-hover);
 }
 
@@ -353,7 +362,7 @@ html[data-theme="light"] .zv-header {
   background:
     radial-gradient(
       circle at 75% 40%,
-      rgba(255, 38, 51, 0.08),
+      rgba(255, 80, 166, 0.12),
       transparent 35%
     ),
     var(--zv-surface);
@@ -376,7 +385,7 @@ html[data-theme="light"] .zv-header {
 }
 
 .zv-hero h1 span {
-  color: var(--zv-red);
+  color: var(--zv-primary);
 }
 
 .zv-hero p {
@@ -421,13 +430,13 @@ html[data-theme="light"] .zv-header {
 }
 
 .zv-button-primary {
-  background: var(--zv-red);
+  background: var(--zv-primary);
   color: #ffffff;
 }
 
 .zv-button-primary:hover {
-  background: var(--zv-red-dark);
-  box-shadow: 0 8px 22px rgba(255, 38, 51, 0.22);
+  background: var(--zv-primary-dark);
+  box-shadow: 0 8px 22px rgba(255, 80, 166, 0.22);
   transform: translateY(-1px);
 }
 
@@ -438,8 +447,8 @@ html[data-theme="light"] .zv-header {
 }
 
 .zv-button-secondary:hover {
-  border-color: var(--zv-red);
-  color: var(--zv-red);
+  border-color: var(--zv-primary);
+  color: var(--zv-primary);
 }
 
 
@@ -483,11 +492,11 @@ html[data-theme="light"] .zv-header {
   width: 34px;
   height: 3px;
 
-  background: var(--zv-red);
+  background: var(--zv-primary);
 }
 
 .zv-section-link {
-  color: var(--zv-red);
+  color: var(--zv-primary);
 
   font-size: 14px;
   font-weight: 700;
@@ -566,7 +575,7 @@ html[data-theme="light"] .zv-header {
 .zv-card-category {
   margin-bottom: 8px;
 
-  color: var(--zv-red);
+  color: var(--zv-primary);
 
   font-size: 11px;
   font-weight: 800;
@@ -584,7 +593,7 @@ html[data-theme="light"] .zv-header {
 }
 
 .zv-card-title a:hover {
-  color: var(--zv-red);
+  color: var(--zv-primary);
 }
 
 .zv-card-excerpt {
@@ -646,7 +655,7 @@ html[data-theme="light"] .zv-header {
   width: 32px;
   height: 2px;
 
-  background: var(--zv-red);
+  background: var(--zv-primary);
 }
 
 .zv-panel p {
@@ -720,7 +729,7 @@ html[data-theme="light"] .zv-header {
 .zv-article-category {
   margin-bottom: 12px;
 
-  color: var(--zv-red);
+  color: var(--zv-primary);
 
   font-size: 12px;
   font-weight: 800;
@@ -776,14 +785,14 @@ html[data-theme="light"] .zv-header {
 }
 
 .zv-article-content a {
-  color: var(--zv-red);
+  color: var(--zv-primary);
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
 }
 
 .zv-article-content a:hover {
-  color: var(--zv-red-dark);
+  color: var(--zv-primary-dark);
 }
 
 .zv-article-content ul,
@@ -806,7 +815,7 @@ html[data-theme="light"] .zv-header {
 
   padding: 18px 22px;
 
-  border-left: 3px solid var(--zv-red);
+  border-left: 3px solid var(--zv-primary);
 
   background: var(--zv-surface);
 
@@ -936,7 +945,7 @@ html[data-theme="light"] .zv-header {
 }
 
 .zv-footer-brand span {
-  color: var(--zv-red);
+  color: var(--zv-primary);
 }
 
 .zv-footer p {
@@ -967,7 +976,7 @@ html[data-theme="light"] .zv-header {
 }
 
 .zv-footer-links a:hover {
-  color: var(--zv-red);
+  color: var(--zv-primary);
 }
 
 .zv-footer-bottom {
@@ -1014,7 +1023,7 @@ html[data-theme="light"] .zv-header {
 }
 
 .zv-search input:focus {
-  border-color: var(--zv-red);
+  border-color: var(--zv-primary);
 }
 
 
@@ -1023,7 +1032,7 @@ html[data-theme="light"] .zv-header {
    --------------------------------------------------------- */
 
 :focus-visible {
-  outline: 2px solid var(--zv-red);
+  outline: 2px solid var(--zv-primary);
   outline-offset: 3px;
 }
 
@@ -1331,9 +1340,9 @@ html[data-theme="light"] .zv-header {
   flex-wrap: wrap;
   gap: 24px;
   padding: 32px 0;
+  margin-top: 42px;
   border-top: 1px solid var(--zv-border);
   border-bottom: 1px solid var(--zv-border);
-  margin: 48px 0;
 }
 
 .zv-trust-stat {
@@ -1519,7 +1528,7 @@ html[data-theme="light"] .zv-header {
 }
 
 .zv-post-content a {
-  color: var(--zv-accent);
+  color: var(--zv-primary);
   text-decoration: none;
 }
 
@@ -1563,7 +1572,7 @@ html[data-theme="light"] .zv-header {
 .zv-post-content blockquote {
   margin: 30px 0;
   padding: 20px 25px;
-  border-left: 3px solid var(--zv-accent);
+  border-left: 3px solid var(--zv-primary);
   background: var(--zv-surface);
   color: var(--zv-text-muted);
 }
@@ -1708,7 +1717,7 @@ html[data-theme="light"] .zv-header {
 .zv-toc-title {
   margin-bottom: 13px;
 
-  color: var(--zv-red);
+  color: var(--zv-primary);
 
   font-size: 10px;
   font-weight: 800;

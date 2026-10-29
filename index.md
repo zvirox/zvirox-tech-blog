@@ -47,6 +47,21 @@ description: Practical technology, IT, networking and cybersecurity tutorials an
 
       </div>
 
+      <div class="zv-trust-bar">
+        <div class="zv-trust-stat">
+          <span class="zv-trust-value">40+</span>
+          <span class="zv-trust-label">Articles</span>
+        </div>
+        <div class="zv-trust-stat">
+          <span class="zv-trust-value">100%</span>
+          <span class="zv-trust-label">Open Source</span>
+        </div>
+        <div class="zv-trust-stat">
+          <span class="zv-trust-value">Free</span>
+          <span class="zv-trust-label">To Read</span>
+        </div>
+      </div>
+
     </div>
 
   </section>

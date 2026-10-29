@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <!-- Begin Jekyll SEO tag v2.9.1 -->
+<title>From ElevenLabs to VoiceStudio: Migrating to Open Source Voice Cloning | Zvirox</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="From ElevenLabs to VoiceStudio: Migrating to Open Source Voice Cloning" />
+<meta name="author" content="Zvirox" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A migration guide from ElevenLabs to VoiceStudio — cost comparison, feature mapping, local deployment, and how to move your voice cloning workflow on-premises." />
+<meta name="twitter:description" property="og:description" content="A migration guide from ElevenLabs to VoiceStudio — cost comparison, feature mapping, local deployment, and how to move your voice cloning workflow on-premises." />
+<link rel="canonical" href="https://zvirox.in/voice%20ai/ai/from-elevenlabs-to-voicestudio-migration-guide/" />
+<meta property="og:url" content="https://zvirox.in/voice%20ai/ai/from-elevenlabs-to-voicestudio-migration-guide/" />
+<meta property="og:site_name" content="Zvirox" />
+<meta property="og:image" content="https://zvirox.in/assets/images/ai/elevenlabs-to-voicestudio.webp" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-23T00:00:00+05:30" />
+<meta property="article:modified_time" content="2026-10-23T00:00:00+05:30" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://zvirox.in/assets/images/ai/elevenlabs-to-voicestudio.webp" />
+<meta name="twitter:title" content="From ElevenLabs to VoiceStudio: Migrating to Open Source Voice Cloning" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Zvirox"},"dateModified":"2026-10-23T00:00:00+05:30","datePublished":"2026-10-23T00:00:00+05:30","description":"A migration guide from ElevenLabs to VoiceStudio — cost comparison, feature mapping, local deployment, and how to move your voice cloning workflow on-premises.","headline":"From ElevenLabs to VoiceStudio: Migrating to Open Source Voice Cloning","image":"https://zvirox.in/assets/images/ai/elevenlabs-to-voicestudio.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://zvirox.in/voice%20ai/ai/from-elevenlabs-to-voicestudio-migration-guide/"},"url":"https://zvirox.in/voice%20ai/ai/from-elevenlabs-to-voicestudio-migration-guide/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  
+  <!-- Prevent theme flash on page load -->
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem("zvirox-theme");
+
+      if (savedTheme === "light") {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    })();
+  </script>
+
+  <!-- Zvirox stylesheet -->
+  <link
+    rel="stylesheet"
+    href="/assets/css/style.css"
+  >
+</head>
+
+<body>
+
+  <!-- =====================================================
+       HEADER
+       ===================================================== -->
+
+  <header class="zv-header">
+
+    <div class="zv-container zv-header-inner">
+
+      <!-- Brand -->
+      <a
+        class="zv-brand"
+        href="/"
+        aria-label="Zvirox home"
+      >
+        <img
+          src="/assets/images/zvirox-logo.png"
+          alt="Zvirox"
+        >
+      </a>
+
+
+      <!-- Navigation -->
+      <nav
+        class="zv-nav"
+        aria-label="Main navigation"
+      >
+
+        <a href="/">
+          Home
+        </a>
+
+        <a href="/articles/">
+          Articles
+        </a>
+
+        <a href="/categories/">
+          Categories
+        </a>
+
+        <a href="/about/">
+          About
+        </a>
+
+      </nav>
+
+
+      <!-- Header controls -->
+      <div class="zv-header-actions">
+
+        <!-- Theme toggle -->
+        <button
+          id="zv-theme-toggle"
+          class="zv-icon-button"
+          type="button"
+          aria-label="Switch to light mode"
+          title="Switch theme"
+        >
+          <span id="zv-theme-icon" aria-hidden="true">☀️</span>
+        </button>
+
+        <!-- Mobile menu button -->
+        <button
+          id="zv-menu-button"
+          class="zv-icon-button zv-menu-button"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          title="Open menu"
+        >
+          <span aria-hidden="true">☰</span>
+        </button>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =====================================================
+       MAIN CONTENT
+       ===================================================== -->
+
+  <main id="main-content">
+
+    <div class="zv-container">
+
+  <article class="zv-post">
+
+    <!-- =====================================================
+         ARTICLE HEADER
+         ===================================================== -->
+
+    <header class="zv-post-header">
+
+      
+        <div class="zv-card-category">
+          Voice AI
+        </div>
+      
+
+      <h1 class="zv-post-title">
+        From ElevenLabs to VoiceStudio: Migrating to Open Source Voice Cloning
+      </h1>
+
+      
+        <p class="zv-post-description">
+          A migration guide from ElevenLabs to VoiceStudio — cost comparison, feature mapping, local deployment, and how to move your voice cloning workflow on-premises.
+        </p>
+      
+
+      <div class="zv-post-meta">
+
+        <span>
+          October 23, 2026
+        </span>
+
+        <span>•</span>
+
+        <span>
+          By Zvirox
+        </span>
+
+      </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         ARTICLE LAYOUT
+         ===================================================== -->
+
+    <div class="zv-post-layout">
+
+      <!-- Table of Contents -->
+      <aside
+        class="zv-toc"
+        aria-label="Table of contents"
+      >
+
+        <div class="zv-toc-inner">
+
+          <div class="zv-toc-title">
+            ON THIS PAGE
+          </div>
+
+          <nav id="zv-toc-list"></nav>
+
+        </div>
+
+      </aside>
+
+
+      <!-- Article -->
+      <div
+        class="zv-post-content"
+        id="zv-article-content"
+      >
+
+        <h2 id="why-migrate-from-elevenlabs-to-voicestudio">Why Migrate from ElevenLabs to VoiceStudio?</h2>
+
+<p>ElevenLabs is the market leader in cloud voice AI, but it comes with tradeoffs:</p>
+
+<ul>
+  <li><strong>Subscription pricing</strong> — monthly credits, no ownership</li>
+  <li><strong>Audio uploaded</strong> — your voice data lives on their servers</li>
+  <li><strong>Closed source</strong> — no visibility into how models process your audio</li>
+  <li><strong>Vendor lock-in</strong> — difficult to migrate voices and settings elsewhere</li>
+</ul>
+
+<p>VoiceStudio flips this model: local-first, open source (AGPL-3.0), one-time purchase option, and your audio never leaves your machine.</p>
+
+<h2 id="feature-mapping-elevenlabs--voicestudio">Feature Mapping: ElevenLabs → VoiceStudio</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>ElevenLabs Feature</th>
+      <th>VoiceStudio Equivalent</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Voice cloning (instant)</td>
+      <td>Voice Clone — 3-second sample</td>
+      <td>✅ Parity</td>
+    </tr>
+    <tr>
+      <td>Voice design</td>
+      <td>Voice Design — describe and generate</td>
+      <td>✅ Parity</td>
+    </tr>
+    <tr>
+      <td>Video dubbing</td>
+      <td>Video Dubbing — 646 languages</td>
+      <td>✅ Parity</td>
+    </tr>
+    <tr>
+      <td>Voice library</td>
+      <td>Voice Gallery — ready-made voices</td>
+      <td>✅ Parity</td>
+    </tr>
+    <tr>
+      <td>Text-to-speech API</td>
+      <td>Local API — programmatic access</td>
+      <td>✅ Parity</td>
+    </tr>
+    <tr>
+      <td>Dubbing Studio</td>
+      <td>Studio — multi-voice projects</td>
+      <td>✅ Parity</td>
+    </tr>
+    <tr>
+      <td>Projects</td>
+      <td>Projects — organize voice work</td>
+      <td>✅ Parity</td>
+    </tr>
+    <tr>
+      <td>Cloud hosting</td>
+      <td>Local or optional Cloud (early access)</td>
+      <td>⚠️ Different model</td>
+    </tr>
+    <tr>
+      <td>Enterprise SOC2</td>
+      <td>Self-hosted — you control compliance</td>
+      <td>✅ Better</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="cost-comparison">Cost Comparison</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>ElevenLabs</th>
+      <th>VoiceStudio OSS</th>
+      <th>VoiceStudio Pro</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Pricing model</strong></td>
+      <td>Monthly credits</td>
+      <td>Free</td>
+      <td>$99/yr or $299 once</td>
+    </tr>
+    <tr>
+      <td><strong>Voice cloning</strong></td>
+      <td>Per-character pricing</td>
+      <td>Free</td>
+      <td>Free (included)</td>
+    </tr>
+    <tr>
+      <td><strong>Commercial use</strong></td>
+      <td>Paid plans</td>
+      <td>AGPL-3.0</td>
+      <td>Included</td>
+    </tr>
+    <tr>
+      <td><strong>API calls</strong></td>
+      <td>Per-call credits</td>
+      <td>Local API (free)</td>
+      <td>Local API (free)</td>
+    </tr>
+    <tr>
+      <td><strong>Audio storage</strong></td>
+      <td>Their cloud</td>
+      <td>Your machine</td>
+      <td>Your machine</td>
+    </tr>
+    <tr>
+      <td><strong>Subscription</strong></td>
+      <td>Required</td>
+      <td>No</td>
+      <td>Optional</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>For a team doing significant voice work, VoiceStudio Pro breaks even in 3–6 months compared to ElevenLabs subscription credits.</p>
+
+<h2 id="migration-checklist">Migration Checklist</h2>
+
+<h3 id="1-export-your-elevenlabs-voices">1. Export Your ElevenLabs Voices</h3>
+
+<p>Before cancelling ElevenLabs, download any voice samples or cloned voices you own:</p>
+
+<ul>
+  <li>Clone original audio samples locally</li>
+  <li>Note voice settings (stability, clarity, similarity)</li>
+  <li>Save generated audio files you want to keep</li>
+</ul>
+
+<h3 id="2-install-voicestudio-locally">2. Install VoiceStudio Locally</h3>
+
+<div class="zv-install-block">
+<pre><code># Windows (PowerShell)
+powershell -ep bypass -c "irm https://voicestudio.sh/install.ps1|iex"
+
+# macOS (Apple Silicon or Intel)
+# Download .dmg from voicestudio.sh
+
+# Linux (.deb)
+wget https://voicestudio.sh/download/voicestudio-linux.deb
+sudo dpkg -i voicestudio-linux.deb
+
+# Docker
+docker pull ghcr.io/debpalash/voicestudio:latest
+docker run -d -p 7860:7860 ghcr.io/debpalash/voicestudio:latest</code></pre>
+<div class="zv-install-hint">Start with Docker for the fastest evaluation, then move to native for daily use.</div>
+</div>
+
+<h3 id="3-re-create-voice-clones">3. Re-create Voice Clones</h3>
+
+<p>VoiceStudio’s voice clone works from a 3-second audio sample:</p>
+
+<ol>
+  <li>Upload your original audio samples</li>
+  <li>Use Voice Clone to create new voice profiles</li>
+  <li>Compare output quality against ElevenLabs</li>
+  <li>Fine-tune with Voice Design descriptions</li>
+</ol>
+
+<h3 id="4-re-build-dubbing-projects">4. Re-build Dubbing Projects</h3>
+
+<p>Move your video dubbing workflow:</p>
+
+<ol>
+  <li>Import video files into VoiceStudio Studio</li>
+  <li>Select target languages (646 available)</li>
+  <li>Assign voices from your Voice Gallery</li>
+  <li>Generate dubbed output with preserved timing</li>
+</ol>
+
+<h3 id="5-update-api-integrations">5. Update API Integrations</h3>
+
+<p>If you use ElevenLabs API in applications:</p>
+
+<ul>
+  <li>Point to VoiceStudio Local API instead</li>
+  <li>Update authentication (local, no API key needed)</li>
+  <li>Test response latency (local = faster)</li>
+  <li>Update billing (no more credits)</li>
+</ul>
+
+<h2 id="side-by-side-elevenlabs-vs-voicestudio">Side-by-Side: ElevenLabs vs VoiceStudio</h2>
+
+<table class="zv-comparison-table">
+  <thead>
+    <tr>
+      <th>Capability</th>
+      <th>ElevenLabs Cloud</th>
+      <th>VoiceStudio OSS</th>
+      <th>VoiceStudio Pro</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Deployment</td>
+      <td>Cloud (their servers)</td>
+      <td>Local (your machine)</td>
+      <td>Local (your machine)</td>
+    </tr>
+    <tr>
+      <td>Source code</td>
+      <td>Closed</td>
+      <td>AGPL-3.0</td>
+      <td>AGPL-3.0 + commercial seat</td>
+    </tr>
+    <tr>
+      <td>Voice cloning</td>
+      <td>✅</td>
+      <td>✅</td>
+      <td>✅</td>
+    </tr>
+    <tr>
+      <td>Video dubbing</td>
+      <td>✅</td>
+      <td>✅</td>
+      <td>✅</td>
+    </tr>
+    <tr>
+      <td>Languages</td>
+      <td>29</td>
+      <td>646</td>
+      <td>646</td>
+    </tr>
+    <tr>
+      <td>Commercial license</td>
+      <td>Paid plans</td>
+      <td>AGPL-3.0</td>
+      <td>Included</td>
+    </tr>
+    <tr>
+      <td>Audio privacy</td>
+      <td>Uploaded</td>
+      <td>Stays local</td>
+      <td>Stays local</td>
+    </tr>
+    <tr>
+      <td>Ongoing cost</td>
+      <td>Monthly credits</td>
+      <td>$0</td>
+      <td>$99/yr or $299 once</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="what-you-gain">What You Gain</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Benefit</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Cost predictability</strong></td>
+      <td>No surprise credit bills</td>
+    </tr>
+    <tr>
+      <td><strong>Data sovereignty</strong></td>
+      <td>Your voice data never leaves your network</td>
+    </tr>
+    <tr>
+      <td><strong>Offline capability</strong></td>
+      <td>Work without internet (native installs)</td>
+    </tr>
+    <tr>
+      <td><strong>No vendor lock-in</strong></td>
+      <td>Open source, forkable, self-hostable</td>
+    </tr>
+    <tr>
+      <td><strong>646 languages</strong></td>
+      <td>More language coverage than ElevenLabs</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="what-you-trade">What You Trade</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Trade-off</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Hardware requirements</strong></td>
+      <td>Need capable local machine (GPU recommended)</td>
+    </tr>
+    <tr>
+      <td><strong>Setup time</strong></td>
+      <td>Initial installation and configuration</td>
+    </tr>
+    <tr>
+      <td><strong>Maintenance</strong></td>
+      <td>You manage updates and backups</td>
+    </tr>
+    <tr>
+      <td><strong>Cloud convenience</strong></td>
+      <td>No managed hosting (unless you choose Pro Cloud)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="the-bottom-line">The Bottom Line</h2>
+
+<p>If you’re paying ElevenLabs monthly for voice cloning, dubbing, or TTS, VoiceStudio is likely cheaper over time and more private. The migration is straightforward: export your samples, install locally, and re-create your voice workflows on your own hardware.</p>
+
+<div class="zv-faq-accordion">
+  <div class="zv-faq-item">
+    <button class="zv-faq-question">
+      Can I import my ElevenLabs voices directly?
+      <span style="font-size:18px; line-height:1;">▾</span>
+    </button>
+    <div class="zv-faq-answer">
+      <p>Not directly — ElevenLabs doesn't export voice models. You'll need original audio samples to re-clone voices in VoiceStudio using the 3-second Voice Clone feature.</p>
+    </div>
+  </div>
+  <div class="zv-faq-item">
+    <button class="zv-faq-question">
+      Is VoiceStudio as good as ElevenLabs quality?
+      <span style="font-size:18px; line-height:1;">▾</span>
+    </button>
+    <div class="zv-faq-answer">
+      <p>VoiceStudio uses modern open-weight voice models. Quality is comparable for most use cases, though ElevenLabs may still lead in emotional range and ultra-low latency streaming.</p>
+    </div>
+  </div>
+  <div class="zv-faq-item">
+    <button class="zv-faq-question">
+      What about the Pro Cloud tier?
+      <span style="form-size:18px; line-height:1;">▾</span>
+    </button>
+    <div class="zv-faq-answer">
+      <p>Pro Cloud is VoiceStudio's hosted option (early access). It gives you managed infrastructure without self-hosting, while still keeping the open-source core.</p>
+    </div>
+  </div>
+</div>
+
+
+      </div>
+
+    </div>
+
+<!-- =====================================================
+     RELATED ARTICLES
+     ===================================================== -->
+
+
+
+
+
+  <section class="zv-related">
+
+    <div class="zv-section-header">
+
+      <h2 class="zv-section-title">
+        Related Articles
+      </h2>
+
+    </div>
+
+
+    <div class="zv-related-grid">
+
+      
+
+      
+
+        
+
+      
+
+        
+
+          <article class="zv-card">
+
+            <div class="zv-card-body">
+
+              <div class="zv-card-category">
+                Voice AI
+              </div>
+
+              <h3 class="zv-card-title">
+
+                <a href="/voice%20ai/ai/running-voice-ai-locally-privacy-first-tts/">
+                  Running Voice AI Locally: Privacy-First Alternatives to Cloud TTS
+                </a>
+
+              </h3>
+
+
+              
+
+                <p class="zv-card-excerpt">
+                  A guide to running voice AI locally — voice cloning, text-to-speech, and video dubbing without uploading your audio to the cloud. Includes VoiceStudio, Docker deployment, and privacy best practices.
+                </p>
+
+              
+
+
+              <div class="zv-card-meta">
+
+                <span>
+                  Oct 23, 2026
+                </span>
+
+                <span>•</span>
+
+                <span>
+                  Read article
+                </span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+          
+
+        
+
+      
+
+        
+
+          <article class="zv-card">
+
+            <div class="zv-card-body">
+
+              <div class="zv-card-category">
+                Voice AI
+              </div>
+
+              <h3 class="zv-card-title">
+
+                <a href="/voice%20ai/ai/voicestudio-review-local-ai-voice-cloning/">
+                  VoiceStudio Review: Local AI Voice Cloning in 646 Languages
+                </a>
+
+              </h3>
+
+
+              
+
+                <p class="zv-card-excerpt">
+                  A hands-on review of VoiceStudio — the open-source AI voice studio that runs fully local. Voice cloning from 3 seconds, video dubbing, audiobook creation, and how it compares to ElevenLabs.
+                </p>
+
+              
+
+
+              <div class="zv-card-meta">
+
+                <span>
+                  Oct 23, 2026
+                </span>
+
+                <span>•</span>
+
+                <span>
+                  Read article
+                </span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+          
+
+        
+
+      
+
+    </div>
+
+  </section>
+
+
+
+    <!-- =====================================================
+         TAGS
+         ===================================================== -->
+
+    
+
+      <footer class="zv-post-footer">
+
+        <div class="zv-post-tags">
+
+          
+
+            <span class="zv-tag">
+              voice-cloning
+            </span>
+
+          
+
+            <span class="zv-tag">
+              elevenlabs
+            </span>
+
+          
+
+            <span class="zv-tag">
+              voice-studio
+            </span>
+
+          
+
+            <span class="zv-tag">
+              migration
+            </span>
+
+          
+
+            <span class="zv-tag">
+              local-ai
+            </span>
+
+          
+
+            <span class="zv-tag">
+              open-source
+            </span>
+
+          
+
+            <span class="zv-tag">
+              tts
+            </span>
+
+          
+
+        </div>
+
+      </footer>
+
+    
+
+  </article>
+
+</div>
+
+
+<!-- =========================================================
+     AUTOMATIC TABLE OF CONTENTS
+     ========================================================= -->
+
+<script>
+(function () {
+
+  const article = document.getElementById("zv-article-content");
+  const toc = document.getElementById("zv-toc-list");
+
+  if (!article || !toc) {
+    return;
+  }
+
+  const headings = article.querySelectorAll("h2, h3");
+
+  if (headings.length === 0) {
+    const tocContainer = document.querySelector(".zv-toc");
+
+    if (tocContainer) {
+      tocContainer.style.display = "none";
+    }
+
+    return;
+  }
+
+
+  headings.forEach(function (heading, index) {
+
+    /*
+     * Create a predictable ID when the heading
+     * doesn't already have one.
+     */
+
+    if (!heading.id) {
+
+      const slug = heading.textContent
+        .trim()
+        .toLowerCase()
+        .replace(/[^\w\s-]/g, "")
+        .replace(/\s+/g, "-")
+        .replace(/-+/g, "-");
+
+      heading.id = slug || "section-" + (index + 1);
+    }
+
+
+    const link = document.createElement("a");
+
+    link.href = "#" + heading.id;
+    link.textContent = heading.textContent;
+
+    if (heading.tagName.toLowerCase() === "h3") {
+      link.classList.add("zv-toc-subitem");
+    } else {
+      link.classList.add("zv-toc-item");
+    }
+
+
+    link.addEventListener("click", function () {
+
+      const target = document.getElementById(heading.id);
+
+      if (!target) {
+        return;
+      }
+
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+
+      history.replaceState(
+        null,
+        "",
+        "#" + heading.id
+      );
+
+    });
+
+
+    toc.appendChild(link);
+
+  });
+
+})();
+</script>
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer class="zv-footer">
+
+    <div class="zv-container">
+
+      <div class="zv-footer-grid">
+
+        <!-- Brand -->
+        <div>
+
+          <div class="zv-footer-brand">
+            Zvirox
+          </div>
+
+          <p>
+            Practical technology, IT, networking and
+            cybersecurity tutorials and guides.
+          </p>
+
+        </div>
+
+
+        <!-- Explore -->
+        <div>
+
+          <h3>Explore</h3>
+
+          <div class="zv-footer-links">
+
+            <a href="/">
+              Home
+            </a>
+
+            <a href="/articles/">
+              Articles
+            </a>
+
+            <a href="/categories/">
+              Categories
+            </a>
+
+            <a href="/about/">
+              About
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- Topics -->
+        <div>
+
+          <h3>Topics</h3>
+
+          <div class="zv-footer-links">
+
+            <a href="/categories/cybersecurity/">
+              Cybersecurity
+            </a>
+
+            <a href="/categories/networking/">
+              Networking
+            </a>
+
+            <a href="/categories/linux/">
+              Linux
+            </a>
+
+            <a href="/categories/it/">
+              IT
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="zv-footer-bottom">
+
+        © 2026 Zvirox.
+        All rights reserved.
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+       ZVIROX THEME SCRIPT
+       ===================================================== -->
+
+  <script>
+    (function () {
+
+      const toggle = document.getElementById("zv-theme-toggle");
+      const icon = document.getElementById("zv-theme-icon");
+
+      if (!toggle || !icon) {
+        return;
+      }
+
+      function updateThemeButton() {
+
+        const isLight =
+          document.documentElement.getAttribute("data-theme") === "light";
+
+        if (isLight) {
+
+          icon.textContent = "🌙";
+
+          toggle.setAttribute(
+            "aria-label",
+            "Switch to dark mode"
+          );
+
+          toggle.setAttribute(
+            "title",
+            "Switch to dark mode"
+          );
+
+        } else {
+
+          icon.textContent = "☀️";
+
+          toggle.setAttribute(
+            "aria-label",
+            "Switch to light mode"
+          );
+
+          toggle.setAttribute(
+            "title",
+            "Switch to light mode"
+          );
+        }
+      }
+
+
+      toggle.addEventListener("click", function () {
+
+        const isLight =
+          document.documentElement.getAttribute("data-theme") === "light";
+
+        if (isLight) {
+
+          document.documentElement.removeAttribute("data-theme");
+
+          localStorage.setItem(
+            "zvirox-theme",
+            "dark"
+          );
+
+        } else {
+
+          document.documentElement.setAttribute(
+            "data-theme",
+            "light"
+          );
+
+          localStorage.setItem(
+            "zvirox-theme",
+            "light"
+          );
+        }
+
+        updateThemeButton();
+      });
+
+
+      updateThemeButton();
+
+    })();
+  </script>
+
+</body>
+</html>
