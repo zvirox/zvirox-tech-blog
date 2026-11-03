@@ -49,6 +49,10 @@ permalink: /projects/eep/
       </div>
     </header>
 
+    <figure style="margin: 0 0 40px;">
+      <img src="{{ '/assets/images/projects/easy-edits-pro-mockup.png' | relative_url }}" alt="Conceptual Easy Edits Pro video editor with a mountain lake preview, media bin, inspector, and multitrack timeline." width="1668" height="938" style="display: block; width: 100%; height: auto; border: 1px solid var(--zv-border); border-radius: 16px;" decoding="async">
+      <figcaption style="margin-top: 10px; color: var(--zv-text-muted); font-size: 13px;">Concept mockup based on Easy Edits Pro's video editing workspaces.</figcaption>
+    </figure>
 
     <!-- Content -->
     <div class="zv-post-content">

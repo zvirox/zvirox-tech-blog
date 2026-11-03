@@ -49,6 +49,10 @@ permalink: /projects/alp/
       </div>
     </header>
 
+    <figure style="margin: 0 0 40px;">
+      <img src="{{ '/assets/images/projects/audio-labs-pro-mockup.png' | relative_url }}" alt="Conceptual Audio Labs Pro Stories workspace with a multitrack audio timeline, seven workspace rail, docked transport, and voice effects inspector." width="1668" height="938" style="display: block; width: 100%; height: auto; border: 1px solid var(--zv-border); border-radius: 16px;" decoding="async">
+      <figcaption style="margin-top: 10px; color: var(--zv-text-muted); font-size: 13px;">Concept mockup inspired by Audio Labs Pro's seven-workspace glass interface.</figcaption>
+    </figure>
 
     <!-- Content -->
     <div class="zv-post-content">

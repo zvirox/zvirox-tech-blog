@@ -49,6 +49,11 @@ permalink: /projects/ytf/
       </div>
     </header>
 
+    <figure style="margin: 0 0 40px;">
+      <img src="{{ '/assets/images/projects/your-tv-friend-mockup.png' | relative_url }}" alt="Your TV Friend Your UI concept screen with For You recommendations, five round glass controls, and a translucent app shelf over a cinematic landscape." width="1668" height="938" style="display: block; width: 100%; height: auto; border: 1px solid var(--zv-border); border-radius: 16px;" decoding="async">
+      <figcaption style="margin-top: 10px; color: var(--zv-text-muted); font-size: 13px;">Concept mockup inspired by Your UI's Glass UI home-screen layout.</figcaption>
+    </figure>
+
 
     <!-- Content -->
     <div class="zv-post-content">
