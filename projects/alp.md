@@ -7,56 +7,27 @@ permalink: /projects/alp/
 
 <div class="zv-container">
 
-  <article class="zv-post" style="max-width: 960px; margin: 0 auto;">
+  <article class="zv-post zv-project-page">
+    <a class="zv-project-back" href="{{ '/projects/' | relative_url }}">&larr; All projects</a>
 
-    <!-- Breadcrumb -->
-    <div style="margin-bottom: 24px; color: var(--zv-text-muted); font-size: 14px;">
-      <a href="{{ '/' | relative_url }}" style="color: var(--zv-text-secondary);">Home</a> &rarr; 
-      <a href="{{ '/projects/' | relative_url }}" style="color: var(--zv-text-secondary);">Projects</a> &rarr; 
-      <span style="color: var(--zv-text);">Audio Labs Pro</span>
-    </div>
+    <section class="zv-project-hero" aria-labelledby="project-title">
+      <header class="zv-project-intro">
+        <h1 class="zv-post-title" id="project-title">Audio Labs Pro</h1>
+        <p class="zv-post-description">A Linux audio studio built with Rust for multitrack recording, editing, mixing, and export, with offline AI voice tools, dictation, voice profiles, and CLAP/LV2 plugin hosting.</p>
+        <p class="zv-project-status">Linux audio workstation · Alpha v0.0.1-alpha.2</p>
+        <div class="zv-project-tags" aria-label="Technologies"><span class="zv-tag">Rust</span> <span class="zv-tag">Linux</span> <span class="zv-tag">Iced</span> <span class="zv-tag">Audio DSP</span> <span class="zv-tag">Local AI</span></div>
+        <div class="zv-project-actions">
+          <a href="https://github.com/zvirox/audio-labs-pro" target="_blank" rel="noopener noreferrer" class="zv-button zv-button-primary">View on GitHub <span aria-hidden="true">↗</span></a>
+          <a href="{{ '/projects/' | relative_url }}" class="zv-project-text-link">Explore all projects <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </header>
+            <figure class="zv-project-visual">
+        <img class="zv-project-image" src="{{ '/assets/images/projects/audio-labs-pro-mockup.png' | relative_url }}" alt="Conceptual Audio Labs Pro Stories workspace with a multitrack audio timeline, seven workspace rail, docked transport, and voice effects inspector." width="1668" height="938" decoding="async">
+        <figcaption class="zv-project-caption">Concept mockup inspired by Audio Labs Pro's seven-workspace glass interface.</figcaption>
+      </figure>
+    </section>
 
-    <!-- Header -->
-    <header class="zv-post-header" style="margin-bottom: 40px;">
-      <div class="zv-card-category">
-        AUDIO WORKSTATION • ALPHA v0.0.1-alpha.2
-      </div>
-
-      <h1 class="zv-post-title">
-        Audio Labs Pro
-      </h1>
-
-      <p class="zv-post-description">
-        A Linux audio studio built with Rust for multitrack recording, editing, mixing, and export, 
-        with offline AI voice tools, dictation, voice profiles, and CLAP/LV2 plugin hosting.
-      </p>
-
-      <div style="margin: 20px 0; display: flex; flex-wrap: wrap; gap: 8px;">
-        <span class="zv-tag">Rust</span>
-        <span class="zv-tag">Linux</span>
-        <span class="zv-tag">Iced</span>
-        <span class="zv-tag">Audio DSP</span>
-        <span class="zv-tag">Local AI</span>
-      </div>
-
-      <div class="zv-post-meta" style="margin-top: 20px; display: flex; gap: 16px; align-items: center;">
-        <a href="https://github.com/zvirox/audio-labs-pro" target="_blank" rel="noopener noreferrer" class="zv-button zv-button-primary" style="min-height: 38px; padding: 0 16px; font-size: 13px;">
-          View on GitHub ↗
-        </a>
-        <a href="{{ '/projects/' | relative_url }}" class="zv-button zv-button-secondary" style="min-height: 38px; padding: 0 16px; font-size: 13px;">
-          &larr; Back to Projects
-        </a>
-      </div>
-    </header>
-
-    <figure style="margin: 0 0 40px;">
-      <img src="{{ '/assets/images/projects/audio-labs-pro-mockup.png' | relative_url }}" alt="Conceptual Audio Labs Pro Stories workspace with a multitrack audio timeline, seven workspace rail, docked transport, and voice effects inspector." width="1668" height="938" style="display: block; width: 100%; height: auto; border: 1px solid var(--zv-border); border-radius: 16px;" decoding="async">
-      <figcaption style="margin-top: 10px; color: var(--zv-text-muted); font-size: 13px;">Concept mockup inspired by Audio Labs Pro's seven-workspace glass interface.</figcaption>
-    </figure>
-
-    <!-- Content -->
-    <div class="zv-post-content">
-
+    <div class="zv-post-content zv-project-content">
       <h2>Overview</h2>
       <p>
         <strong>Audio Labs Pro</strong> is an advanced open-source audio workstation written in Rust for Linux environments. 
@@ -106,19 +77,18 @@ permalink: /projects/alp/
         <li>Repository: <a href="https://github.com/zvirox/audio-labs-pro" target="_blank" rel="noopener noreferrer">GitHub Repository</a></li>
         <li>Releases: Check GitHub releases for alpha tarballs and build instructions.</li>
       </ul>
-
     </div>
 
-    <!-- Navigation Footer -->
-    <div style="margin-top: 60px; padding-top: 30px; border-top: 1px solid var(--zv-border); display: flex; justify-content: space-between; align-items: center;">
+    <nav class="zv-project-navigation" aria-label="Project navigation">
       <a href="{{ '/projects/eep/' | relative_url }}" class="zv-section-link">
         &larr; Previous: Easy Edits Pro
       </a>
       <a href="{{ '/projects/ytf/' | relative_url }}" class="zv-section-link">
         Next Project: Your TV Friend &rarr;
       </a>
-    </div>
+    </nav>
 
   </article>
+
 
 </div>
