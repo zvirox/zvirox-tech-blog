@@ -110,8 +110,8 @@ permalink: /projects/alp/
       <a href="{{ '/projects/eep/' | relative_url }}" class="zv-section-link">
         &larr; Previous: Easy Edits Pro
       </a>
-      <a href="{{ '/projects/cft/' | relative_url }}" class="zv-section-link">
-        Next Project: Climin TV Friend &rarr;
+      <a href="{{ '/projects/ytf/' | relative_url }}" class="zv-section-link">
+        Next Project: Your TV Friend &rarr;
       </a>
     </div>
 

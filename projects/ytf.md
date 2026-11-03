@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Climin TV Friend | Zvirox
-description: A non-destructive Android TV cleanup toolkit and native television launcher. Combines ADB-based package disabling tools with Climin UI.
-permalink: /projects/cft/
+title: Your TV Friend | Zvirox
+description: A non-destructive Android TV cleanup tool and Your UI, a native television launcher, with reversible ADB-based package controls.
+permalink: /projects/ytf/
 ---
 
 <div class="zv-container">
@@ -13,7 +13,7 @@ permalink: /projects/cft/
     <div style="margin-bottom: 24px; color: var(--zv-text-muted); font-size: 14px;">
       <a href="{{ '/' | relative_url }}" style="color: var(--zv-text-secondary);">Home</a> &rarr; 
       <a href="{{ '/projects/' | relative_url }}" style="color: var(--zv-text-secondary);">Projects</a> &rarr; 
-      <span style="color: var(--zv-text);">Climin TV Friend</span>
+      <span style="color: var(--zv-text);">Your TV Friend</span>
     </div>
 
     <!-- Header -->
@@ -23,12 +23,12 @@ permalink: /projects/cft/
       </div>
 
       <h1 class="zv-post-title">
-        Climin TV Friend
+        Your TV Friend
       </h1>
 
       <p class="zv-post-description">
-        A non-destructive Android TV cleanup toolkit and native television launcher. The project combines 
-        ADB-based debloat and restoration tools with Climin UI, a customizable launcher for Android TV.
+        A non-destructive Android TV cleanup tool and a native television launcher. The project combines
+        reversible ADB-based debloating tools with Your UI, a customizable launcher for Android TV.
       </p>
 
       <div style="margin: 20px 0; display: flex; flex-wrap: wrap; gap: 8px;">
@@ -40,7 +40,7 @@ permalink: /projects/cft/
       </div>
 
       <div class="zv-post-meta" style="margin-top: 20px; display: flex; gap: 16px; align-items: center;">
-        <a href="https://github.com/zvirox/climin-tv-friend" target="_blank" rel="noopener noreferrer" class="zv-button zv-button-primary" style="min-height: 38px; padding: 0 16px; font-size: 13px;">
+        <a href="https://github.com/zvirox/your-tv-friend" target="_blank" rel="noopener noreferrer" class="zv-button zv-button-primary" style="min-height: 38px; padding: 0 16px; font-size: 13px;">
           View on GitHub ↗
         </a>
         <a href="{{ '/projects/' | relative_url }}" class="zv-button zv-button-secondary" style="min-height: 38px; padding: 0 16px; font-size: 13px;">
@@ -55,16 +55,15 @@ permalink: /projects/cft/
 
       <h2>Overview</h2>
       <p>
-        <strong>Climin TV Friend</strong> is an open-source utility designed to give users complete control over their 
-        Android TV experience. It pairs a non-destructive cleanup subsystem with <strong>Climin UI</strong>, a lightweight, 
-        customizable, ad-free television launcher designed for Android 8.0 through 14.
+        <strong>Your TV Friend</strong> is an open-source Android TV project with two parts: non-destructive,
+        reversible cleanup tools and <strong>Your UI</strong>, a native television launcher for Android 8.0 and newer.
       </p>
 
       <h2>Two Core Components</h2>
       
       <h3>1. Non-Destructive Debloater</h3>
       <p>
-        Unlike risky scripts that attempt to forcibly delete system files, Climin TV Friend's debloating tools operate 
+        The debloating tools avoid deleting system files. They operate
         via a pure-Python ADB client using Android's native package manager:
       </p>
       <ul>
@@ -73,7 +72,7 @@ permalink: /projects/cft/
         <li>No root access required; communicates directly over local network ADB or USB.</li>
       </ul>
 
-      <h3>2. Climin UI Launcher</h3>
+      <h3>2. Your UI Launcher</h3>
       <p>
         A fast, native TV launcher written in clean Java, providing five selectable visual styles:
       </p>
@@ -95,14 +94,14 @@ permalink: /projects/cft/
 
       <h2>Safety & Device Compatibility</h2>
       <p>
-        Climin UI supports televisions and streaming boxes running Android 8.0 through Android 14. Because television 
+        Your UI supports televisions and streaming boxes running Android 8.0 and newer. Because television 
         hardware and manufacturer firmware modifications vary significantly between brands, users should exercise care 
         and consult the project's documentation before disabling system packages.
       </p>
 
       <h2>Resources & Links</h2>
       <ul>
-        <li>Repository: <a href="https://github.com/zvirox/climin-tv-friend" target="_blank" rel="noopener noreferrer">GitHub Repository</a></li>
+        <li>Repository: <a href="https://github.com/zvirox/your-tv-friend" target="_blank" rel="noopener noreferrer">GitHub Repository</a></li>
         <li>Releases & APKs: Available via GitHub Releases for manual sideloading.</li>
       </ul>
 

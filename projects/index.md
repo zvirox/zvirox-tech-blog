@@ -113,17 +113,17 @@ permalink: /projects/
       </article>
 
 
-      <!-- Climin TV Friend -->
+      <!-- Your TV Friend -->
       <article class="zv-card">
         <div class="zv-card-body" style="display: flex; flex-direction: column; height: 100%;">
           <div class="zv-card-category">
             ANDROID TV • CLEANUP & LAUNCHER
           </div>
           <h3 class="zv-card-title">
-            <a href="{{ '/projects/cft/' | relative_url }}">Climin TV Friend</a>
+            <a href="{{ '/projects/ytf/' | relative_url }}">Your TV Friend</a>
           </h3>
           <p class="zv-card-excerpt" style="flex-grow: 1;">
-            A non-destructive Android TV cleanup toolkit and native television launcher (Climin UI). 
+            A non-destructive Android TV cleanup tool and native television launcher (Your UI).
             Combines ADB-based package disabling tools with 5 customizable launcher visual styles.
           </p>
           <div style="margin-bottom: 16px; display: flex; flex-wrap: wrap; gap: 6px;">
@@ -134,10 +134,10 @@ permalink: /projects/
             <span class="zv-tag">Android</span>
           </div>
           <div style="display: flex; align-items: center; justify-content: space-between; pt-12; border-top: 1px solid var(--zv-border);">
-            <a href="{{ '/projects/cft/' | relative_url }}" class="zv-section-link">
+            <a href="{{ '/projects/ytf/' | relative_url }}" class="zv-section-link">
               Explore Project →
             </a>
-            <a href="https://github.com/zvirox/climin-tv-friend" target="_blank" rel="noopener noreferrer" style="color: var(--zv-text-muted); font-size: 13px; font-weight: 600;">
+            <a href="https://github.com/zvirox/your-tv-friend" target="_blank" rel="noopener noreferrer" style="color: var(--zv-text-muted); font-size: 13px; font-weight: 600;">
               GitHub ↗
             </a>
           </div>

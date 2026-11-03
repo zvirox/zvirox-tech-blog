@@ -61,15 +61,15 @@ Successfully implemented a complete Projects portfolio section for the Zvirox te
 - Status & Limitations: Alpha release, Linux-focused
 - Navigation footer with prev/next links
 
-### 4. Climin TV Friend Detail Page (`/projects/cft/`)
-**File:** `projects/cft.md`  
-**Route:** `https://zvirox.in/projects/cft/`  
+### 4. Your TV Friend Detail Page (`/projects/ytf/`)
+**File:** `projects/ytf.md`  
+**Route:** `https://zvirox.in/projects/ytf/`  
 **Content:**
 - Breadcrumb navigation
 - Project hero describing Android TV cleanup and launcher
 - Two Core Components:
   1. Non-Destructive Debloater (ADB-based, reversible pm disable-user)
-  2. Climin UI Launcher (5 visual styles: Glass UI, Material 3, Win UI, Cyberpunk, Retro)
+  2. Your UI Launcher (5 visual styles: Glass UI, Material 3, Win UI, Cyberpunk, Retro)
 - Integrated TV Features: TMDB recommendations, weather, screensaver
 - Safety & Device Compatibility: Android 8.0-14 support notes
 - Navigation footer
@@ -130,8 +130,8 @@ All project descriptions verified against actual repository documentation:
 - ✅ Offline-first claim: "only network traffic is user-initiated model downloads"
 - ✅ CLAP/LV2 plugin hosting confirmed
 
-### Climin TV Friend
-- ✅ Repository: https://github.com/zvirox/climin-tv-friend
+### Your TV Friend
+- ✅ Repository: https://github.com/zvirox/your-tv-friend
 - ✅ Five launcher styles verified (Glass UI, Material 3, Win UI, Cyberpunk, Retro)
 - ✅ ADB-based debloating with `pm disable-user` confirmed
 - ✅ Android 8.0-14 compatibility noted
@@ -176,7 +176,7 @@ permalink: /projects/[route]/
 1. `projects/index.md` - Projects index page
 2. `projects/eep.md` - Easy Edits Pro detail page
 3. `projects/alp.md` - Audio Labs Pro detail page
-4. `projects/cft.md` - Climin TV Friend detail page
+4. `projects/ytf.md` - Your TV Friend detail page
 
 ### Modified Files (1)
 1. `_layouts/default.html` - Added Projects to header and footer navigation
@@ -223,7 +223,7 @@ Jekyll is installed on the system:
 All GitHub repository links are correct and verified:
 - https://github.com/zvirox/easy-edits-pro
 - https://github.com/zvirox/audio-labs-pro
-- https://github.com/zvirox/climin-tv-friend
+- https://github.com/zvirox/your-tv-friend
 
 All use proper security attributes:
 ```html
@@ -249,7 +249,7 @@ When site is rebuilt:
 - [ ] Verify `/projects/` loads correctly
 - [ ] Verify `/projects/eep/` loads correctly
 - [ ] Verify `/projects/alp/` loads correctly
-- [ ] Verify `/projects/cft/` loads correctly
+- [ ] Verify `/projects/ytf/` loads correctly
 - [ ] Test header "Projects" navigation link
 - [ ] Test footer "Projects" navigation link
 - [ ] Test all breadcrumb links
