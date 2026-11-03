@@ -113,6 +113,38 @@ permalink: /projects/
       </article>
 
 
+      <!-- Screen Studio Pro -->
+      <article class="zv-card">
+        <div class="zv-card-body" style="display: flex; flex-direction: column; height: 100%;">
+          <div class="zv-card-category">
+            LINUX SCREEN RECORDER • PLANNING PHASE
+          </div>
+          <h3 class="zv-card-title">
+            <a href="{{ '/projects/ssp/' | relative_url }}">Screen Studio Pro</a>
+          </h3>
+          <p class="zv-card-excerpt" style="flex-grow: 1;">
+            A planned open-source Wayland screen recorder with a frosted-glass interface, PipeWire capture,
+            webcam picture-in-picture, and hardware-first encoding.
+          </p>
+          <div style="margin-bottom: 16px; display: flex; flex-wrap: wrap; gap: 6px;">
+            <span class="zv-tag">Rust</span>
+            <span class="zv-tag">Tauri</span>
+            <span class="zv-tag">React</span>
+            <span class="zv-tag">Linux</span>
+            <span class="zv-tag">Wayland</span>
+          </div>
+          <div style="display: flex; align-items: center; justify-content: space-between; pt-12; border-top: 1px solid var(--zv-border);">
+            <a href="{{ '/projects/ssp/' | relative_url }}" class="zv-section-link">
+              Explore Project →
+            </a>
+            <a href="https://github.com/zvirox/screen-studio-pro" target="_blank" rel="noopener noreferrer" style="color: var(--zv-text-muted); font-size: 13px; font-weight: 600;">
+              GitHub ↗
+            </a>
+          </div>
+        </div>
+      </article>
+
+
       <!-- Your TV Friend -->
       <article class="zv-card">
         <div class="zv-card-body" style="display: flex; flex-direction: column; height: 100%;">
