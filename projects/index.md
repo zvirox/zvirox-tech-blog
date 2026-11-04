@@ -7,9 +7,7 @@ permalink: /projects/
 
 <div class="zv-container">
 
-  <!-- =====================================================
        HERO SECTION
-       ===================================================== -->
 
   <section class="zv-about-hero">
     
@@ -35,9 +33,7 @@ permalink: /projects/
   </section>
 
 
-  <!-- =====================================================
        PROJECTS GRID
-       ===================================================== -->
 
   <section class="zv-section">
     
@@ -69,7 +65,7 @@ permalink: /projects/
             <span class="zv-tag">GStreamer</span>
             <span class="zv-tag">Linux</span>
           </div>
-          <div style="display: flex; align-items: center; justify-content: space-between; pt-12; border-top: 1px solid var(--zv-border);">
+          <div style="display: flex; align-items: center; justify-content: space-between; padding-top: 12px; border-top: 1px solid var(--zv-border);">
             <a href="{{ '/projects/eep/' | relative_url }}" class="zv-section-link">
               Explore Project →
             </a>
@@ -101,7 +97,7 @@ permalink: /projects/
             <span class="zv-tag">Audio DSP</span>
             <span class="zv-tag">Local AI</span>
           </div>
-          <div style="display: flex; align-items: center; justify-content: space-between; pt-12; border-top: 1px solid var(--zv-border);">
+          <div style="display: flex; align-items: center; justify-content: space-between; padding-top: 12px; border-top: 1px solid var(--zv-border);">
             <a href="{{ '/projects/alp/' | relative_url }}" class="zv-section-link">
               Explore Project →
             </a>
@@ -134,6 +130,7 @@ permalink: /projects/
             <span class="zv-tag">Wayland</span>
           </div>
           <div style="display: flex; align-items: center; justify-content: space-between; pt-12; border-top: 1px solid var(--zv-border);">
+          <div style="display: flex; align-items: center; justify-content: space-between; padding-top: 12px; border-top: 1px solid var(--zv-border);">
             <a href="{{ '/projects/ssp/' | relative_url }}" class="zv-section-link">
               Explore Project →
             </a>
@@ -166,6 +163,7 @@ permalink: /projects/
             <span class="zv-tag">Android</span>
           </div>
           <div style="display: flex; align-items: center; justify-content: space-between; pt-12; border-top: 1px solid var(--zv-border);">
+          <div style="display: flex; align-items: center; justify-content: space-between; padding-top: 12px; border-top: 1px solid var(--zv-border);">
             <a href="{{ '/projects/ytf/' | relative_url }}" class="zv-section-link">
               Explore Project →
             </a>

@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "assets/css/style.scss"
+        ],
+        "createdAt": "2026-11-03T05:27:02.849Z",
+        "reason": "Existing semantic treatment: blockquotes use the accent as a quotation marker, and the About philosophy panel distinguishes a featured statement."
+      }
+    ]
+  }
+}

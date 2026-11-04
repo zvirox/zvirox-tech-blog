@@ -22,7 +22,7 @@ permalink: /projects/eep/
         </div>
       </header>
             <figure class="zv-project-visual">
-        <img class="zv-project-image" src="{{ '/assets/images/projects/easy-edits-pro-mockup.png' | relative_url }}" alt="Conceptual Easy Edits Pro video editor with a mountain lake preview, media bin, inspector, and multitrack timeline." width="1668" height="938" decoding="async">
+        <img class="zv-project-image" src="{{ '/assets/images/projects/easy-edits-pro-mockup.png' | relative_url }}" alt="Conceptual Easy Edits Pro video editor with a mountain lake preview, media bin, inspector, and multitrack timeline." decoding="async">
         <figcaption class="zv-project-caption">Concept mockup based on Easy Edits Pro's video editing workspaces.</figcaption>
       </figure>
     </section>
