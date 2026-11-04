@@ -59,85 +59,18 @@ description: Explore technology, IT, networking, Linux, cybersecurity, AI and vo
 
       </p>
 
-      {% if category_slug == "networking" %}
-
-        <a
-          href="{{ '/categories/networking/' | relative_url }}"
-          class="zv-section-link"
-        >
-          Explore →
-        </a>
-
-      {% elsif category_slug == "cybersecurity" %}
-
-        <a
-          href="{{ '/categories/cybersecurity/' | relative_url }}"
-          class="zv-section-link"
-        >
-          Explore →
-        </a>
-
-      {% elsif category_slug == "linux" %}
-
-        <a
-          href="{{ '/categories/linux/' | relative_url }}"
-          class="zv-section-link"
-        >
-          Explore →
-        </a>
-
-      {% elsif category_slug == "it" %}
-
-        <a
-          href="{{ '/categories/it/' | relative_url }}"
-          class="zv-section-link"
-        >
-          Explore →
-        </a>
-
-      {% elsif category_slug == "cloud" %}
-
-        <a
-          href="{{ '/categories/cloud/' | relative_url }}"
-          class="zv-section-link"
-        >
-          Explore →
-        </a>
-
-      {% elsif category_slug == "technology" %}
-
-        <a
-          href="{{ '/categories/technology/' | relative_url }}"
-          class="zv-section-link"
-        >
-          Explore →
-        </a>
-
-      {% elsif category_slug == "ai" %}
-
-        <a
-          href="{{ '/categories/ai/' | relative_url }}"
-          class="zv-section-link"
-        >
-          Explore →
-        </a>
-
-      {% elsif category_slug == "voice-ai" %}
-
-        <a
-          href="{{ '/categories/voice-ai/' | relative_url }}"
-          class="zv-section-link"
-        >
-          Explore →
-        </a>
-
-      {% endif %}
+      <a
+        href="{{ '/categories/' | append: category_slug | append: '/' | relative_url }}"
+        class="zv-section-link"
+      >
+        Explore →
+      </a>
 
     </div>
 
   </article>
 
-      {% endfor %}
+{% endfor %}
 
     </div>
 

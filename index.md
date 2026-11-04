@@ -49,7 +49,7 @@ description: Practical technology, IT, networking and cybersecurity tutorials an
 
       <div class="zv-trust-bar">
         <div class="zv-trust-stat">
-          <span class="zv-trust-value">40+</span>
+          <span class="zv-trust-value">{{ site.posts.size }}</span>
           <span class="zv-trust-label">Articles</span>
         </div>
         <div class="zv-trust-stat">

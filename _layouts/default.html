@@ -2,11 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1"
-  >
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   {% seo %}
 
@@ -14,17 +10,16 @@
   <script>
     (function () {
       const savedTheme = localStorage.getItem("zvirox-theme");
-
       if (savedTheme === "light") {
         document.documentElement.setAttribute("data-theme", "light");
       }
     })();
   </script>
 
-  <!-- Add viewport meta tag for mobile responsiveness -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Feed autodiscovery -->
+  <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
 
-  <!-- Zvirox stylesheet -->
+  <!-- Zvirox stylesheet with cache-busting -->
   <link
     rel="stylesheet"
     href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.time | date: '%s' }}"
@@ -38,6 +33,9 @@
        ===================================================== -->
 
   <header class="zv-header">
+
+    <!-- Scroll progress indicator -->
+    <div id="zv-scroll-progress" class="zv-scroll-progress" aria-hidden="true"></div>
 
     <div class="zv-container zv-header-inner">
 
@@ -60,23 +58,23 @@
         aria-label="Main navigation"
       >
 
-        <a href="{{ '/' | relative_url }}">
+        <a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}active{% endif %}" {% if page.url == '/' %}aria-current="page"{% endif %}>
           Home
         </a>
 
-        <a href="{{ '/articles/' | relative_url }}">
+        <a href="{{ '/articles/' | relative_url }}" class="{% if page.url contains '/articles/' or page.layout == 'post' %}active{% endif %}" {% if page.url contains '/articles/' %}aria-current="page"{% endif %}>
           Articles
         </a>
 
-        <a href="{{ '/categories/' | relative_url }}">
+        <a href="{{ '/categories/' | relative_url }}" class="{% if page.url contains '/categories/' or page.layout == 'category' %}active{% endif %}" {% if page.url contains '/categories/' %}aria-current="page"{% endif %}>
           Categories
         </a>
 
-        <a href="{{ '/projects/' | relative_url }}">
+        <a href="{{ '/projects/' | relative_url }}" class="{% if page.url contains '/projects/' %}active{% endif %}" {% if page.url contains '/projects/' %}aria-current="page"{% endif %}>
           Projects
         </a>
 
-        <a href="{{ '/about/' | relative_url }}">
+        <a href="{{ '/about/' | relative_url }}" class="{% if page.url contains '/about/' %}active{% endif %}" {% if page.url contains '/about/' %}aria-current="page"{% endif %}>
           About
         </a>
 
@@ -104,9 +102,10 @@
           type="button"
           aria-label="Open navigation menu"
           aria-expanded="false"
+          aria-controls="zv-mobile-drawer"
           title="Open menu"
         >
-          <span aria-hidden="true">☰</span>
+          <span id="zv-menu-icon" aria-hidden="true">☰</span>
         </button>
 
       </div>
@@ -114,6 +113,60 @@
     </div>
 
   </header>
+
+
+  <!-- =====================================================
+       MOBILE NAVIGATION DRAWER
+       ===================================================== -->
+
+  <div id="zv-mobile-drawer" class="zv-mobile-drawer" aria-hidden="true">
+    <div class="zv-mobile-drawer-backdrop" id="zv-drawer-backdrop"></div>
+    <div class="zv-mobile-drawer-content" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+      <div class="zv-mobile-drawer-header">
+        <span class="zv-card-category">NAVIGATION</span>
+        <button
+          id="zv-mobile-close"
+          class="zv-icon-button"
+          type="button"
+          aria-label="Close navigation menu"
+        >
+          <span aria-hidden="true">✕</span>
+        </button>
+      </div>
+
+      <nav class="zv-mobile-nav" aria-label="Mobile navigation">
+        <a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">
+          <span>Home</span>
+          <span class="zv-mobile-nav-arrow" aria-hidden="true">→</span>
+        </a>
+        <a href="{{ '/articles/' | relative_url }}" class="{% if page.url contains '/articles/' or page.layout == 'post' %}active{% endif %}">
+          <span>Articles</span>
+          <span class="zv-mobile-nav-arrow" aria-hidden="true">→</span>
+        </a>
+        <a href="{{ '/categories/' | relative_url }}" class="{% if page.url contains '/categories/' or page.layout == 'category' %}active{% endif %}">
+          <span>Categories</span>
+          <span class="zv-mobile-nav-arrow" aria-hidden="true">→</span>
+        </a>
+        <a href="{{ '/projects/' | relative_url }}" class="{% if page.url contains '/projects/' %}active{% endif %}">
+          <span>Projects</span>
+          <span class="zv-mobile-nav-arrow" aria-hidden="true">→</span>
+        </a>
+        <a href="{{ '/about/' | relative_url }}" class="{% if page.url contains '/about/' %}active{% endif %}">
+          <span>About</span>
+          <span class="zv-mobile-nav-arrow" aria-hidden="true">→</span>
+        </a>
+      </nav>
+
+      <div class="zv-mobile-drawer-footer">
+        <p>Practical technology, IT, networking & cybersecurity tutorials and guides.</p>
+        <div style="display:flex; gap:10px; margin-top:14px;">
+          <a href="https://github.com/zvirox" target="_blank" rel="noopener noreferrer" class="zv-button zv-button-secondary" style="width:100%; justify-content:center; min-height:40px; font-size:13px;">
+            GitHub Profile ↗
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
   <!-- =====================================================
@@ -207,6 +260,10 @@
               IT
             </a>
 
+            <a href="{{ '/categories/ai/' | relative_url }}">
+              AI
+            </a>
+
           </div>
 
         </div>
@@ -226,88 +283,164 @@
   </footer>
 
 
+  <!-- Back to Top Floating Button -->
+  <button id="zv-back-to-top" class="zv-back-to-top" type="button" aria-label="Back to top" title="Back to top">
+    <span aria-hidden="true">↑</span>
+  </button>
+
+
   <!-- =====================================================
-       ZVIROX THEME SCRIPT
+       ZVIROX INTERACTIVE SCRIPTS
        ===================================================== -->
 
   <script>
     (function () {
+      "use strict";
 
+      /* 1. THEME SWITCHER */
       const toggle = document.getElementById("zv-theme-toggle");
       const icon = document.getElementById("zv-theme-icon");
 
-      if (!toggle || !icon) {
-        return;
-      }
-
       function updateThemeButton() {
-
-        const isLight =
-          document.documentElement.getAttribute("data-theme") === "light";
-
+        if (!icon || !toggle) return;
+        const isLight = document.documentElement.getAttribute("data-theme") === "light";
         if (isLight) {
-
           icon.textContent = "🌙";
-
-          toggle.setAttribute(
-            "aria-label",
-            "Switch to dark mode"
-          );
-
-          toggle.setAttribute(
-            "title",
-            "Switch to dark mode"
-          );
-
+          toggle.setAttribute("aria-label", "Switch to dark mode");
+          toggle.setAttribute("title", "Switch to dark mode");
         } else {
-
           icon.textContent = "☀️";
-
-          toggle.setAttribute(
-            "aria-label",
-            "Switch to light mode"
-          );
-
-          toggle.setAttribute(
-            "title",
-            "Switch to light mode"
-          );
+          toggle.setAttribute("aria-label", "Switch to light mode");
+          toggle.setAttribute("title", "Switch to light mode");
         }
       }
 
+      if (toggle) {
+        toggle.addEventListener("click", function () {
+          // Suppress transitions during theme swap so colors don't smear
+          document.documentElement.classList.add("zv-theme-transitioning");
+          const isLight = document.documentElement.getAttribute("data-theme") === "light";
 
-      toggle.addEventListener("click", function () {
+          if (isLight) {
+            document.documentElement.removeAttribute("data-theme");
+            localStorage.setItem("zvirox-theme", "dark");
+          } else {
+            document.documentElement.setAttribute("data-theme", "light");
+            localStorage.setItem("zvirox-theme", "light");
+          }
 
-        const isLight =
-          document.documentElement.getAttribute("data-theme") === "light";
+          updateThemeButton();
 
-        if (isLight) {
-
-          document.documentElement.removeAttribute("data-theme");
-
-          localStorage.setItem(
-            "zvirox-theme",
-            "dark"
-          );
-
-        } else {
-
-          document.documentElement.setAttribute(
-            "data-theme",
-            "light"
-          );
-
-          localStorage.setItem(
-            "zvirox-theme",
-            "light"
-          );
-        }
+          window.requestAnimationFrame(function () {
+            window.requestAnimationFrame(function () {
+              document.documentElement.classList.remove("zv-theme-transitioning");
+            });
+          });
+        });
 
         updateThemeButton();
+      }
+
+      /* 2. MOBILE NAVIGATION DRAWER */
+      const menuButton = document.getElementById("zv-menu-button");
+      const mobileDrawer = document.getElementById("zv-mobile-drawer");
+      const closeButton = document.getElementById("zv-mobile-close");
+      const drawerBackdrop = document.getElementById("zv-drawer-backdrop");
+
+      function openMobileDrawer() {
+        if (!mobileDrawer) return;
+        mobileDrawer.classList.add("is-open");
+        mobileDrawer.setAttribute("aria-hidden", "false");
+        if (menuButton) menuButton.setAttribute("aria-expanded", "true");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeMobileDrawer() {
+        if (!mobileDrawer) return;
+        mobileDrawer.classList.remove("is-open");
+        mobileDrawer.setAttribute("aria-hidden", "true");
+        if (menuButton) menuButton.setAttribute("aria-expanded", "false");
+        document.body.style.overflow = "";
+      }
+
+      if (menuButton) menuButton.addEventListener("click", openMobileDrawer);
+      if (closeButton) closeButton.addEventListener("click", closeMobileDrawer);
+      if (drawerBackdrop) drawerBackdrop.addEventListener("click", closeMobileDrawer);
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && mobileDrawer && mobileDrawer.classList.contains("is-open")) {
+          closeMobileDrawer();
+        }
       });
 
+      /* 3. SCROLL PROGRESS INDICATOR */
+      const progressBar = document.getElementById("zv-scroll-progress");
+      if (progressBar) {
+        window.addEventListener("scroll", function () {
+          const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+          const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+          progressBar.style.width = scrolled + "%";
+        }, { passive: true });
+      }
 
-      updateThemeButton();
+      /* 4. BACK TO TOP BUTTON */
+      const backToTop = document.getElementById("zv-back-to-top");
+      if (backToTop) {
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > 350) {
+            backToTop.classList.add("is-visible");
+          } else {
+            backToTop.classList.remove("is-visible");
+          }
+        }, { passive: true });
+
+        backToTop.addEventListener("click", function () {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      }
+
+      /* 5. CODE COPY BUTTONS */
+      document.querySelectorAll(".zv-install-block, .zv-post-content pre").forEach(function (block) {
+        if (block.querySelector(".zv-code-copy-btn")) return;
+        const copyBtn = document.createElement("button");
+        copyBtn.className = "zv-code-copy-btn";
+        copyBtn.setAttribute("aria-label", "Copy code");
+        copyBtn.textContent = "Copy";
+
+        copyBtn.addEventListener("click", function () {
+          const codeEl = block.querySelector("code");
+          const rawText = codeEl ? codeEl.textContent : block.textContent;
+          const cleanText = rawText.replace(/^\$\s+/, "");
+
+          navigator.clipboard.writeText(cleanText).then(function () {
+            copyBtn.textContent = "Copied!";
+            copyBtn.classList.add("copied");
+            setTimeout(function () {
+              copyBtn.textContent = "Copy";
+              copyBtn.classList.remove("copied");
+            }, 2000);
+          }).catch(function () {
+            copyBtn.textContent = "Copied";
+            setTimeout(function () {
+              copyBtn.textContent = "Copy";
+            }, 1500);
+          });
+        });
+
+        block.style.position = "relative";
+        block.appendChild(copyBtn);
+      });
+
+      /* 6. FAQ ACCORDION INTERACTION */
+      document.querySelectorAll(".zv-faq-question").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          const item = btn.closest(".zv-faq-item");
+          if (!item) return;
+          const isAlreadyOpen = item.classList.contains("is-open");
+          item.classList.toggle("is-open", !isAlreadyOpen);
+        });
+      });
 
     })();
   </script>
