@@ -22,7 +22,7 @@ permalink: /projects/ssp/
         </div>
       </header>
             <figure class="zv-project-visual">
-        <img class="zv-project-image" src="{{ '/assets/images/projects/screen-studio-pro-mockup.png' | relative_url }}" alt="Screen Studio Pro concept capture window with monitor, window, and region sources, microphone and system audio meters, a webcam preview, encoding settings, and floating recording controls." width="1668" height="938" decoding="async">
+        <img class="zv-project-image" src="{{ '/assets/images/projects/screen-studio-pro-mockup.png' | relative_url }}" alt="Screen Studio Pro concept capture window with monitor, window, and region sources, microphone and system audio meters, a webcam preview, encoding settings, and floating recording controls." decoding="async">
         <figcaption class="zv-project-caption">Concept mockup based on Screen Studio Pro's planned Wayland recording workflow.</figcaption>
       </figure>
     </section>

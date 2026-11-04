@@ -22,7 +22,7 @@ permalink: /projects/ytf/
         </div>
       </header>
             <figure class="zv-project-visual">
-        <img class="zv-project-image" src="{{ '/assets/images/projects/your-tv-friend-mockup.png' | relative_url }}" alt="Your TV Friend Your UI concept screen with For You recommendations, five round glass controls, and a translucent app shelf over a cinematic landscape." width="1668" height="938" decoding="async">
+        <img class="zv-project-image" src="{{ '/assets/images/projects/your-tv-friend-mockup.png' | relative_url }}" alt="Your TV Friend Your UI concept screen with For You recommendations, five round glass controls, and a translucent app shelf over a cinematic landscape." decoding="async">
         <figcaption class="zv-project-caption">Concept mockup inspired by Your UI's Glass UI home-screen layout.</figcaption>
       </figure>
     </section>
