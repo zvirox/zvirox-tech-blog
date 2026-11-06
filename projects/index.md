@@ -148,7 +148,7 @@ permalink: /projects/
       <article class="zv-card zv-project-card">
         <div class="zv-card-body zv-project-card-body">
           <div class="zv-card-category">
-            ANDROID TV • CLEANUP & LAUNCHER
+            ANDROID TV • v0.0.3
           </div>
           <h3 class="zv-card-title">
             <a href="{{ '/projects/ytf/' | relative_url }}">Your TV Friend</a>

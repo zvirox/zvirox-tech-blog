@@ -1,16 +1,19 @@
-title: "Zvirox"
-description: "Technology, IT, Networking and Cybersecurity tutorials and guides."
+title: "Zvirox · Open-Source Software for Linux & Android TV"
+description: "Zvirox builds open-source desktop and TV software: Easy Edits Pro (video editor), Audio Labs Pro (audio studio), Screen Studio Pro (planned screen recorder) and Your TV Friend (Android TV cleanup tool and launcher)."
 url: "https://zvirox.in"
 
 baseurl: ""
 
-author: "Zvirox"
+author: "Prakashpuri Gauswami"
+email: "info@zvirox.in"
 
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-redirect-from
 
 markdown: kramdown
 
 permalink: /:categories/:title/
+

@@ -18,6 +18,8 @@ tags:
 image: "/assets/images/ai/kilo-ai-hero.webp"
 ---
 
+> *Independent comparison; no affiliation or sponsorship.*
+
 ## Kilo AI: One Open Agent for Every Developer Workflow
 
 Kilo AI (kilo.ai) is an open-source AI coding agent that runs everywhere you write code: VS Code, JetBrains IDEs, CLI, Cloud, Slack, and Mobile. With **500+ models at zero markup**, bring-your-own-keys support, and local model options, it's a model-agnostic alternative to Cursor and other proprietary AI coding tools.

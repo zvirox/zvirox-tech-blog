@@ -11,11 +11,11 @@ layout: default
       <div>
 
         <div class="zv-card-category">
-          CATEGORY
+          TOPIC CATEGORY
         </div>
 
         <h1 class="zv-section-title">
-          {{ page.category }}
+          {% if page.title %}{{ page.title }}{% else %}{{ page.category }}{% endif %}
         </h1>
 
       </div>

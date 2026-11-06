@@ -261,7 +261,9 @@ html[data-theme="light"] .zv-header {
 .zv-brand {
   display: inline-flex;
   align-items: center;
+  gap: 12px;
   flex-shrink: 0;
+  text-decoration: none;
   transition: transform var(--zv-transition), opacity var(--zv-transition);
 }
 
@@ -273,9 +275,28 @@ html[data-theme="light"] .zv-header {
 }
 
 .zv-brand img {
-  width: 140px;
+  width: 130px;
   height: auto;
   display: block;
+}
+
+.zv-brand-tagline {
+  display: inline-block;
+  padding: 3px 0 3px 10px;
+  border-left: 1px solid var(--zv-border);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--zv-text-muted);
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+@media (max-width: 540px) {
+  .zv-brand-tagline {
+    display: none;
+  }
 }
 
 
@@ -948,11 +969,15 @@ html[data-theme="light"] .zv-header {
 
 .zv-footer-grid {
   display: grid;
+  grid-template-columns: 1.4fr repeat(3, 1fr);
+  gap: 36px;
+}
 
-  grid-template-columns:
-    1.5fr 1fr 1fr;
-
-  gap: 40px;
+@media (max-width: 900px) {
+  .zv-footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
 }
 
 .zv-footer-brand {
@@ -2911,6 +2936,279 @@ html:not([data-theme="light"]) .zv-project-image {
 .zv-projects-grid > :nth-child(3) { animation-delay: 150ms; }
 .zv-article-grid > :nth-child(4),
 .zv-projects-grid > :nth-child(4) { animation-delay: 200ms; }
+
+
+/* =========================================================
+   SITE TRANSFORMATION: BLUEPRINT COMPONENTS
+   ========================================================= */
+
+/* 1. Tech Stack Strip */
+.zv-hero-stack {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 10px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--zv-border);
+}
+
+.zv-hero-stack-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--zv-text-muted);
+  margin-right: 4px;
+}
+
+.zv-hero-stack-item {
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--zv-text-secondary);
+  background: var(--zv-surface);
+  border: 1px solid var(--zv-border);
+  border-radius: 999px;
+  padding: 4px 11px;
+  line-height: 1.2;
+}
+
+/* 2. Why Zvirox: 3 Columns */
+.zv-features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 900px) {
+  .zv-features-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.zv-feature-card {
+  background: var(--zv-surface);
+  border: 1px solid var(--zv-border);
+  border-radius: var(--zv-radius);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--zv-transition), border-color var(--zv-transition);
+}
+
+.zv-feature-card:hover {
+  border-color: var(--zv-border-hover);
+  transform: translateY(-2px);
+}
+
+.zv-feature-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--zv-primary-glow);
+  color: var(--zv-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.zv-feature-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 10px;
+  color: var(--zv-text);
+  letter-spacing: -0.01em;
+}
+
+.zv-feature-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--zv-text-muted);
+  margin: 0;
+}
+
+/* 3. By the Numbers: Verified Facts Grid */
+.zv-numbers-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 1024px) {
+  .zv-numbers-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .zv-numbers-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+.zv-number-card {
+  background: var(--zv-surface);
+  border: 1px solid var(--zv-border);
+  border-radius: var(--zv-radius);
+  padding: 20px 18px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  transition: border-color var(--zv-transition);
+}
+
+.zv-number-card:hover {
+  border-color: var(--zv-border-hover);
+}
+
+.zv-number-val {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--zv-primary);
+  letter-spacing: -0.02em;
+  font-family: var(--zv-font-mono, monospace);
+}
+
+.zv-number-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--zv-text);
+  margin-top: 8px;
+  line-height: 1.3;
+}
+
+.zv-number-sub {
+  font-size: 11px;
+  color: var(--zv-text-muted);
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+/* 4. Teaser Panel */
+.zv-teaser-panel {
+  background: var(--zv-surface);
+  border: 1px solid var(--zv-border);
+  border-radius: var(--zv-radius);
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.zv-teaser-content {
+  max-width: 680px;
+}
+
+.zv-teaser-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  color: var(--zv-text);
+}
+
+.zv-teaser-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--zv-text-muted);
+  margin: 0;
+}
+
+/* 5. Verification Box */
+.zv-verification-box {
+  background: var(--zv-surface);
+  border: 1px solid var(--zv-border);
+  border-radius: var(--zv-radius);
+  padding: 20px 24px;
+  margin: 24px 0;
+}
+
+.zv-verification-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--zv-border);
+  font-size: 13px;
+  gap: 16px;
+}
+
+.zv-verification-row:last-child {
+  border-bottom: none;
+}
+
+.zv-verification-label {
+  color: var(--zv-text-muted);
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.zv-verification-value {
+  color: var(--zv-text);
+  font-family: var(--zv-font-mono, monospace);
+  word-break: break-all;
+  text-align: right;
+}
+
+@media (max-width: 600px) {
+  .zv-verification-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  .zv-verification-value {
+    text-align: left;
+  }
+}
+
+/* 6. Legal & Licensing Tables */
+.zv-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  margin: 24px 0;
+  border: 1px solid var(--zv-border);
+  border-radius: var(--zv-radius);
+  background: var(--zv-surface);
+  -webkit-overflow-scrolling: touch;
+}
+
+.zv-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 13.5px;
+}
+
+.zv-table th,
+.zv-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--zv-border);
+  vertical-align: top;
+}
+
+.zv-table th {
+  background: var(--zv-bg-secondary);
+  color: var(--zv-text);
+  font-weight: 700;
+  font-size: 11.5px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.zv-table tr:last-child td {
+  border-bottom: none;
+}
+
+.zv-table tr:hover td {
+  background: var(--zv-surface-hover);
+}
 
 
 /* =========================================================

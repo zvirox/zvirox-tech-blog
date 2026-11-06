@@ -5,8 +5,11 @@ description: "A hands-on review of VoiceStudio — the open-source AI voice stud
 date: 2026-10-23
 author: "Zvirox"
 categories:
-  - Voice AI
-  - AI
+  - voice-audio-ai
+redirect_from:
+  - /voice%20ai/ai/voicestudio-review-local-ai-voice-cloning/
+  - /voice ai/ai/voicestudio-review-local-ai-voice-cloning/
+  - /voice-ai/ai/voicestudio-review-local-ai-voice-cloning/
 tags:
   - voice-cloning
   - text-to-speech
@@ -16,6 +19,8 @@ tags:
   - elevenlabs
 image: "/assets/images/ai/voicestudio-hero.webp"
 ---
+
+> *Independent review; no affiliation or sponsorship.*
 
 ## VoiceStudio: The Open-Source AI Voice Studio
 

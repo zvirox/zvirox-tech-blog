@@ -1,110 +1,22 @@
 ---
 layout: default
-title: Articles
-description: Explore all articles and tutorials published by Zvirox.
+title: Redirecting to Guides | Zvirox
+permalink: /articles/
+redirect_to: /guides/
 ---
 
 <div class="zv-container">
-
-  <section class="zv-section">
-
-    <div class="zv-section-header">
-
-      <div>
-        <div class="zv-card-category">
-          ZVIROX PUBLICATION
-        </div>
-
-        <h1 class="zv-section-title">
-          Articles
-        </h1>
-      </div>
-
-    </div>
-
-
-    {% if site.posts.size > 0 %}
-
-      <div class="zv-article-grid">
-
-        {% for post in site.posts %}
-
-          <article class="zv-card">
-
-            <div class="zv-card-body">
-
-              {% if post.categories and post.categories.size > 0 %}
-
-                <div class="zv-card-category">
-                  {{ post.categories | first }}
-                </div>
-
-              {% endif %}
-
-
-              <h2 class="zv-card-title">
-
-                <a href="{{ post.url | relative_url }}">
-                  {{ post.title }}
-                </a>
-
-              </h2>
-
-
-              {% if post.description %}
-
-                <p class="zv-card-excerpt">
-                  {{ post.description }}
-                </p>
-
-              {% elsif post.excerpt %}
-
-                <p class="zv-card-excerpt">
-                  {{ post.excerpt | strip_html | truncate: 160 }}
-                </p>
-
-              {% endif %}
-
-
-              <div class="zv-card-meta">
-
-                <span>
-                  {{ post.date | date: "%b %d, %Y" }}
-                </span>
-
-                <span>•</span>
-
-                <span>
-                  Read article
-                </span>
-
-              </div>
-
-            </div>
-
-          </article>
-
-        {% endfor %}
-
-      </div>
-
-    {% else %}
-
-      <div class="zv-panel">
-
-        <h2 class="zv-panel-title">
-          No articles yet
-        </h2>
-
-        <p>
-          Zvirox articles and tutorials will appear here
-          once they are published.
-        </p>
-
-      </div>
-
-    {% endif %}
-
+  <section class="zv-section" style="text-align:center; padding:60px 20px;">
+    <h1 class="zv-section-title">Articles has moved to Guides</h1>
+    <p style="color:var(--zv-text-muted); margin:16px 0 24px;">
+      Our technical articles and architecture documentation are now located under Guides.
+    </p>
+    <a href="{{ '/guides/' | relative_url }}" class="zv-button zv-button-primary">
+      Go to Guides &rarr;
+    </a>
   </section>
-
 </div>
+
+<script>
+  window.location.replace("{{ '/guides/' | relative_url }}");
+</script>

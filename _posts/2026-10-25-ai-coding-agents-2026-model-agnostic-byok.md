@@ -18,6 +18,8 @@ tags:
 image: "/assets/images/ai/ai-coding-agents-2026.webp"
 ---
 
+> *Independent analysis; no affiliation or sponsorship.*
+
 ## The AI Coding Agent Landscape in 2026
 
 AI coding agents have moved from autocomplete to full software engineering — planning, writing, debugging, and reviewing code across your entire codebase. But the market has split into two camps:

@@ -5,8 +5,11 @@ description: "A guide to running voice AI locally — voice cloning, text-to-spe
 date: 2026-10-23
 author: "Zvirox"
 categories:
-  - Voice AI
-  - AI
+  - voice-audio-ai
+redirect_from:
+  - /voice%20ai/ai/running-voice-ai-locally-privacy-first-tts/
+  - /voice ai/ai/running-voice-ai-locally-privacy-first-tts/
+  - /voice-ai/ai/running-voice-ai-locally-privacy-first-tts/
 tags:
   - local-ai
   - voice-cloning
@@ -17,6 +20,8 @@ tags:
   - tts
 image: "/assets/images/ai/local-voice-ai.webp"
 ---
+
+> *Independent engineering guide; no affiliation or sponsorship.*
 
 ## Why Run Voice AI Locally?
 
