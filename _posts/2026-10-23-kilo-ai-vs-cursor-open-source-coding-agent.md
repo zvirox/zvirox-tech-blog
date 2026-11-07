@@ -18,6 +18,8 @@ tags:
 image: "/assets/images/ai/kilo-ai-hero.webp"
 ---
 
+![Kilo AI vs Cursor: Open Source AI Coding Agent Comparison](/assets/images/ai/kilo-ai-hero.webp)
+
 > *Independent comparison; no affiliation or sponsorship.*
 
 ## Kilo AI: One Open Agent for Every Developer Workflow

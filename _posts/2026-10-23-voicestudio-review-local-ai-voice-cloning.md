@@ -20,6 +20,8 @@ tags:
 image: "/assets/images/ai/voicestudio-hero.webp"
 ---
 
+![VoiceStudio Review: Local AI Voice Cloning in 646 Languages](/assets/images/ai/voicestudio-hero.webp)
+
 > *Independent review; no affiliation or sponsorship.*
 
 ## VoiceStudio: The Open-Source AI Voice Studio

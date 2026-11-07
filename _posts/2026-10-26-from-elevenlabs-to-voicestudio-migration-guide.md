@@ -21,6 +21,8 @@ tags:
 image: "/assets/images/ai/elevenlabs-to-voicestudio.webp"
 ---
 
+![From ElevenLabs to VoiceStudio: Migrating to Open Source Voice Cloning](/assets/images/ai/elevenlabs-to-voicestudio.webp)
+
 > *Independent migration guide; no affiliation or sponsorship.*
 
 ## Why Migrate from ElevenLabs to VoiceStudio?

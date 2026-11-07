@@ -21,6 +21,8 @@ tags:
 image: "/assets/images/ai/local-voice-ai.webp"
 ---
 
+![Running Voice AI Locally: Privacy-First Alternatives to Cloud TTS](/assets/images/ai/local-voice-ai.webp)
+
 > *Independent engineering guide; no affiliation or sponsorship.*
 
 ## Why Run Voice AI Locally?
