@@ -90,6 +90,30 @@ permalink: /
 
       <!-- Easy Edits Pro -->
       <article class="zv-card zv-project-card">
+        <!-- Motion Graphic: Multitrack Video Timeline -->
+        <div class="zv-project-visual zv-visual-eep" aria-hidden="true">
+          <div class="zv-visual-toolbar">
+            <span class="zv-visual-badge"><span class="zv-dot zv-dot-magenta"></span> VAAPI 60FPS</span>
+            <span class="zv-visual-code">00:01:24:18</span>
+          </div>
+          <div class="zv-timeline-viewport">
+            <div class="zv-timeline-track zv-track-video">
+              <div class="zv-track-clip zv-clip-vid1"><span>CLIP_A01.mp4</span></div>
+              <div class="zv-track-clip zv-clip-vid2"><span>RENDER_PASS.vaapi</span></div>
+            </div>
+            <div class="zv-timeline-track zv-track-audio">
+              <div class="zv-track-clip zv-clip-aud1">
+                <svg class="zv-wave-svg" viewBox="0 0 120 12" preserveAspectRatio="none"><path d="M0,6 Q10,0 20,6 T40,6 T60,6 T80,6 T100,6 T120,6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+                <span>VOICE_01.wav</span>
+              </div>
+              <div class="zv-track-clip zv-clip-aud2">
+                <svg class="zv-wave-svg" viewBox="0 0 80 12" preserveAspectRatio="none"><path d="M0,6 Q8,1 16,6 T32,6 T48,6 T64,6 T80,6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+                <span>SFX_DSP.clap</span>
+              </div>
+            </div>
+            <div class="zv-timeline-playhead"></div>
+          </div>
+        </div>
         <div class="zv-card-body zv-project-card-body">
           <div class="zv-card-category">
             DESKTOP VIDEO EDITOR • ACTIVE ALPHA
@@ -121,6 +145,34 @@ permalink: /
 
       <!-- Audio Labs Pro -->
       <article class="zv-card zv-project-card">
+        <!-- Motion Graphic: Audio DSP Spectrum Analyzer -->
+        <div class="zv-project-visual zv-visual-alp" aria-hidden="true">
+          <div class="zv-visual-toolbar">
+            <span class="zv-visual-badge"><span class="zv-dot zv-dot-cyan"></span> DSP ENGINE • 48kHz</span>
+            <span class="zv-visual-code">-3.2 dBFS</span>
+          </div>
+          <div class="zv-spectrum-viewport">
+            <div class="zv-spectrum-bars">
+              <span style="--i:1; --h:65%;"></span>
+              <span style="--i:2; --h:85%;"></span>
+              <span style="--i:3; --h:45%;"></span>
+              <span style="--i:4; --h:95%;"></span>
+              <span style="--i:5; --h:75%;"></span>
+              <span style="--i:6; --h:60%;"></span>
+              <span style="--i:7; --h:88%;"></span>
+              <span style="--i:8; --h:70%;"></span>
+              <span style="--i:9; --h:92%;"></span>
+              <span style="--i:10; --h:55%;"></span>
+              <span style="--i:11; --h:80%;"></span>
+              <span style="--i:12; --h:62%;"></span>
+              <span style="--i:13; --h:74%;"></span>
+              <span style="--i:14; --h:48%;"></span>
+              <span style="--i:15; --h:82%;"></span>
+              <span style="--i:16; --h:58%;"></span>
+            </div>
+            <div class="zv-spectrum-grid"></div>
+          </div>
+        </div>
         <div class="zv-card-body zv-project-card-body">
           <div class="zv-card-category">
             AUDIO WORKSTATION • ALPHA v0.0.1
@@ -152,6 +204,25 @@ permalink: /
 
       <!-- Screen Studio Pro -->
       <article class="zv-card zv-project-card">
+        <!-- Motion Graphic: Wayland PipeWire Viewfinder -->
+        <div class="zv-project-visual zv-visual-ssp" aria-hidden="true">
+          <div class="zv-visual-toolbar">
+            <span class="zv-visual-badge"><span class="zv-dot zv-dot-red zv-pulse"></span> REC • 00:02:47</span>
+            <span class="zv-visual-code">PIPEWIRE PORTAL</span>
+          </div>
+          <div class="zv-viewfinder-viewport">
+            <div class="zv-reticle zv-reticle-tl"></div>
+            <div class="zv-reticle zv-reticle-tr"></div>
+            <div class="zv-reticle zv-reticle-bl"></div>
+            <div class="zv-reticle zv-reticle-br"></div>
+            <div class="zv-viewfinder-window">
+              <div class="zv-sim-cursor"></div>
+              <div class="zv-sim-pip">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="zv-card-body zv-project-card-body">
           <div class="zv-card-category">
             LINUX SCREEN RECORDER • PLANNING PHASE
@@ -183,6 +254,28 @@ permalink: /
 
       <!-- Your TV Friend -->
       <article class="zv-card zv-project-card">
+        <!-- Motion Graphic: ADB TV Debloater Bridge -->
+        <div class="zv-project-visual zv-visual-ytf" aria-hidden="true">
+          <div class="zv-visual-toolbar">
+            <span class="zv-visual-badge"><span class="zv-dot zv-dot-emerald"></span> ADB CONNECTED</span>
+            <span class="zv-visual-code">192.168.1.104</span>
+          </div>
+          <div class="zv-tv-viewport">
+            <div class="zv-tv-screen">
+              <div class="zv-tv-tile"></div>
+              <div class="zv-tv-tile zv-tile-active"></div>
+              <div class="zv-tv-tile"></div>
+            </div>
+            <div class="zv-adb-status">
+              <div class="zv-adb-packet">
+                <span class="zv-packet-dot"></span>
+                <span class="zv-packet-dot"></span>
+                <span class="zv-packet-dot"></span>
+              </div>
+              <span class="zv-adb-tag">ROOTLESS SAFE</span>
+            </div>
+          </div>
+        </div>
         <div class="zv-card-body zv-project-card-body">
           <div class="zv-card-category">
             ANDROID TV • v0.0.3
