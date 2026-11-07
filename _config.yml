@@ -6,6 +6,7 @@ baseurl: ""
 
 author: "Prakashpuri Gauswami"
 email: "info@zvirox.in"
+repository: "zvirox/zvirox-tech-dev"
 
 plugins:
   - jekyll-feed

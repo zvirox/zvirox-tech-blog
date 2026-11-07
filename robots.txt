@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zvirox.in/sitemap/sitemap.xml
+Sitemap: https://zvirox.in/sitemap.xml
