@@ -3,7 +3,7 @@ layout: default
 title: Projects | Zvirox
 description: Explore the software projects built and maintained across desktop applications, audio production, and Android TV. Built with curiosity and shaped by code.
 permalink: /projects/
-image: "/assets/images/zvirox-logo.png"
+image: "/assets/images/zvirox-logo-2026.png"
 ---
 
 <div class="zv-container">
