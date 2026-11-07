@@ -373,7 +373,7 @@ permalink: /
 
 
   <!-- =====================================================
-       6. LATEST GUIDES (3 MOST RECENT POSTS)
+       6. LATEST GUIDES (4 MOST RECENT POSTS)
        ===================================================== -->
 
   <section class="zv-section">
@@ -402,7 +402,7 @@ permalink: /
 
       {% if site.posts.size > 0 %}
 
-        {% for post in site.posts limit: 3 %}
+        {% for post in site.posts limit: 4 %}
 
           <article class="zv-card">
 
