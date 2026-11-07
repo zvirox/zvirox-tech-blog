@@ -1,9 +1,23 @@
-# Zvirox Web (`zvirox-tech-dev`)
+<p align="center">
+  <a href="https://zvirox.in">
+    <img src="assets/images/zvirox-logo.png" alt="Zvirox Logo" width="280">
+  </a>
+</p>
 
-[![Site Status](https://img.shields.io/website?url=https%3A%2F%2Fzvirox.in&label=zvirox.in&style=flat-square)](https://zvirox.in)
-[![GitHub Pages](https://img.shields.io/badge/deployment-GitHub%20Pages-blue?style=flat-square&logo=github)](https://zvirox.in)
-[![Maintainer](https://img.shields.io/badge/maintainer-@Prakash-ff50a6?style=flat-square)](https://github.com/zvirox)
-[![License: MIT](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
+<h1 align="center">Zvirox Web (<code>zvirox-tech-dev</code>)</h1>
+
+<p align="center">
+  <b>Official Website &amp; Technical Documentation Hub for <a href="https://zvirox.in">zvirox.in</a></b>
+  <br>
+  <i>Cyber Defender · Privacy-First · Linux &amp; Android TV Open-Source Software</i>
+</p>
+
+<p align="center">
+  <a href="https://zvirox.in"><img src="https://img.shields.io/website?url=https%3A%2F%2Fzvirox.in&label=zvirox.in&style=flat-square" alt="Site Status"></a>
+  <a href="https://zvirox.in"><img src="https://img.shields.io/badge/deployment-GitHub%20Pages-blue?style=flat-square&logo=github" alt="GitHub Pages"></a>
+  <a href="https://github.com/zvirox"><img src="https://img.shields.io/badge/maintainer-@Prakash-ff50a6?style=flat-square" alt="Maintainer"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="License: MIT"></a>
+</p>
 
 > The official website and engineering documentation hub for **[Zvirox](https://zvirox.in)** — showcasing open-source desktop and TV software crafted for Linux and Android TV, built by solo maintainer **Prakashpuri Gauswami** (@Prakash).
 
