@@ -3621,6 +3621,81 @@ html:not([data-theme="light"]) .zv-project-image {
 }
 
 /* =========================================================
+   PROJECT ARCHITECTURAL TEARDOWN SCHEMATICS (PHASE 3)
+   ========================================================= */
+
+.zv-teardown-schematic {
+  margin: 36px 0 48px;
+  background: #090b10;
+  border: 1px solid var(--zv-border);
+  border-radius: var(--zv-radius);
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+}
+
+.zv-teardown-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  background: rgba(255, 255, 255, 0.02);
+  border-bottom: 1px solid var(--zv-border);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 11px;
+}
+
+.zv-teardown-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.zv-teardown-category {
+  font-weight: 700;
+  color: var(--zv-primary);
+  letter-spacing: 0.05em;
+}
+
+.zv-teardown-subtitle {
+  color: var(--zv-text-secondary);
+  font-weight: 500;
+}
+
+.zv-teardown-shield {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  color: #34d399;
+  letter-spacing: 0.04em;
+}
+
+.zv-teardown-body {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.zv-teardown-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .zv-teardown-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 12px 14px;
+  }
+  .zv-teardown-body {
+    padding: 10px;
+  }
+}
+
+/* =========================================================
    ACCESSIBILITY: PREFERS REDUCED MOTION
    ========================================================= */
 

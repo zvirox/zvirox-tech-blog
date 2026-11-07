@@ -67,8 +67,101 @@ image: "/assets/images/projects/easy-edits-pro-mockup.png"
 
       <h2>Architecture & Technology Stack</h2>
       <p>
-        The application is structured around a strict separation of concerns:
+        The application is structured around a strict separation of concerns, ensuring low-latency editing responsiveness and zero data leaks:
       </p>
+
+      <!-- Architecture Teardown Diagram -->
+      <div class="zv-teardown-schematic" aria-label="Easy Edits Pro Architecture Teardown">
+        <div class="zv-teardown-header">
+          <div class="zv-teardown-title-wrap">
+            <span class="zv-teardown-category">PIPELINE TEARDOWN</span>
+            <span class="zv-teardown-subtitle">Rust Core · Tauri 2 IPC · GStreamer HW Accel</span>
+          </div>
+          <span class="zv-teardown-shield">🔒 AIRGAPPED LOCAL DISK</span>
+        </div>
+        <div class="zv-teardown-body">
+          <svg class="zv-teardown-svg" viewBox="0 0 840 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Column 1: Presentation (React + TypeScript) -->
+            <rect x="20" y="20" width="230" height="290" rx="8" fill="#0f121d" stroke="#ff50a6" stroke-opacity="0.4" stroke-width="1.5"/>
+            <rect x="20" y="20" width="230" height="34" rx="8" fill="#171b2c"/>
+            <text x="135" y="42" font-family="'Liberation Mono', monospace" font-size="11" font-weight="700" fill="#ffa5d0" text-anchor="middle">1. PRESENTATION (UI)</text>
+            
+            <rect x="35" y="70" width="200" height="42" rx="5" fill="#1b2138" stroke="#334155" stroke-width="1"/>
+            <text x="45" y="88" font-family="'Liberation Sans', sans-serif" font-size="12" font-weight="700" fill="#ffffff">7 Modular Workspaces</text>
+            <text x="45" y="103" font-family="'Liberation Mono', monospace" font-size="10" fill="#94a3b8">Edit · Color · Audio · Deliver</text>
+
+            <rect x="35" y="124" width="200" height="52" rx="5" fill="#1b2138" stroke="#334155" stroke-width="1"/>
+            <text x="45" y="143" font-family="'Liberation Sans', sans-serif" font-size="12" font-weight="700" fill="#ffffff">Virtualized Timeline</text>
+            <text x="45" y="158" font-family="'Liberation Mono', monospace" font-size="10" fill="#94a3b8">60fps Canvas track renderer</text>
+            <text x="45" y="170" font-family="'Liberation Mono', monospace" font-size="9" fill="#ff50a6">Sub-frame clip snip &amp; ripple</text>
+
+            <rect x="35" y="188" width="200" height="50" rx="5" fill="#1b2138" stroke="#334155" stroke-width="1"/>
+            <text x="45" y="207" font-family="'Liberation Sans', sans-serif" font-size="12" font-weight="700" fill="#ffffff">Automation Bridges</text>
+            <text x="45" y="222" font-family="'Liberation Mono', monospace" font-size="10" fill="#38bdf8">CLI Client (eep-cli)</text>
+            <text x="45" y="233" font-family="'Liberation Mono', monospace" font-size="9" fill="#34d399">MCP Server (440 tool calls)</text>
+
+            <rect x="35" y="250" width="200" height="46" rx="5" fill="#141828" stroke="rgba(255,80,166,0.3)" stroke-width="1"/>
+            <text x="135" y="278" font-family="'Liberation Mono', monospace" font-size="10" fill="#ffa5d0" text-anchor="middle">React 18 · TypeScript</text>
+
+            <!-- Arrow 1 -> 2: Tauri 2 IPC -->
+            <path d="M 250,150 L 300,150" stroke="#ff50a6" stroke-width="2"/>
+            <polygon points="305,150 295,145 295,155" fill="#ff50a6"/>
+            <text x="277" y="140" font-family="'Liberation Mono', monospace" font-size="9" fill="#ff50a6" text-anchor="middle">Tauri IPC</text>
+            <text x="277" y="170" font-family="'Liberation Mono', monospace" font-size="8.5" fill="#94a3b8" text-anchor="middle">Zero-Copy</text>
+
+            <!-- Column 2: Backend Core (Rust Engine) -->
+            <rect x="305" y="20" width="240" height="290" rx="8" fill="#101524" stroke="#ff50a6" stroke-opacity="0.6" stroke-width="1.8"/>
+            <rect x="305" y="20" width="240" height="34" rx="8" fill="#192238"/>
+            <text x="425" y="42" font-family="'Liberation Mono', monospace" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">2. RUST TRANSACTION CORE</text>
+
+            <rect x="320" y="70" width="210" height="64" rx="5" fill="#17223b" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1"/>
+            <text x="330" y="90" font-family="'Liberation Sans', sans-serif" font-size="12" font-weight="700" fill="#ffffff">Transactional Project Model</text>
+            <text x="330" y="106" font-family="'Liberation Mono', monospace" font-size="10" fill="#38bdf8">ACID Undo / Redo Journal</text>
+            <text x="330" y="122" font-family="'Liberation Mono', monospace" font-size="9.5" fill="#94a3b8">Immutable timeline state graph</text>
+
+            <rect x="320" y="146" width="210" height="66" rx="5" fill="#17223b" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1"/>
+            <text x="330" y="166" font-family="'Liberation Sans', sans-serif" font-size="12" font-weight="700" fill="#ffffff">Auto-Recovery Journal</text>
+            <text x="330" y="182" font-family="'Liberation Mono', monospace" font-size="10" fill="#34d399">Crash resilience on power loss</text>
+            <text x="330" y="198" font-family="'Liberation Mono', monospace" font-size="9.5" fill="#94a3b8">Periodic write-ahead log (.eep)</text>
+
+            <rect x="320" y="224" width="210" height="72" rx="5" fill="#17223b" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1"/>
+            <text x="330" y="244" font-family="'Liberation Sans', sans-serif" font-size="12" font-weight="700" fill="#ffffff">GStreamer Pipeline Host</text>
+            <text x="330" y="260" font-family="'Liberation Mono', monospace" font-size="10" fill="#ffa5d0">Dynamic bin constructor</text>
+            <text x="330" y="276" font-family="'Liberation Mono', monospace" font-size="9.5" fill="#94a3b8">Audio/Video sync bus</text>
+
+            <!-- Arrow 2 -> 3: Pipeline Bus -->
+            <path d="M 545,150 L 595,150" stroke="#38bdf8" stroke-width="2"/>
+            <polygon points="600,150 590,145 590,155" fill="#38bdf8"/>
+            <text x="572" y="140" font-family="'Liberation Mono', monospace" font-size="9" fill="#38bdf8" text-anchor="middle">GStreamer</text>
+            <text x="572" y="170" font-family="'Liberation Mono', monospace" font-size="8.5" fill="#94a3b8" text-anchor="middle">NVMM/DMABUF</text>
+
+            <!-- Column 3: Processing & Hardware Output -->
+            <rect x="600" y="20" width="220" height="290" rx="8" fill="#0f1422" stroke="#38bdf8" stroke-opacity="0.5" stroke-width="1.5"/>
+            <rect x="600" y="20" width="220" height="34" rx="8" fill="#152136"/>
+            <text x="710" y="42" font-family="'Liberation Mono', monospace" font-size="11" font-weight="700" fill="#38bdf8" text-anchor="middle">3. HARDWARE &amp; ENCODE</text>
+
+            <rect x="615" y="70" width="190" height="66" rx="5" fill="#162238" stroke="#34d399" stroke-opacity="0.4" stroke-width="1"/>
+            <text x="625" y="90" font-family="'Liberation Sans', sans-serif" font-size="12" font-weight="700" fill="#ffffff">HW Acceleration</text>
+            <text x="625" y="106" font-family="'Liberation Mono', monospace" font-size="10" fill="#34d399">VAAPI (Intel / AMD)</text>
+            <text x="625" y="122" font-family="'Liberation Mono', monospace" font-size="10" fill="#38bdf8">NVENC (NVIDIA CUDA)</text>
+
+            <rect x="615" y="148" width="190" height="66" rx="5" fill="#162238" stroke="#34d399" stroke-opacity="0.4" stroke-width="1"/>
+            <text x="625" y="168" font-family="'Liberation Sans', sans-serif" font-size="12" font-weight="700" fill="#ffffff">Audio DSP Mixing</text>
+            <text x="625" y="184" font-family="'Liberation Mono', monospace" font-size="10" fill="#e2e8f0">48kHz / 24-bit floating point</text>
+            <text x="625" y="200" font-family="'Liberation Mono', monospace" font-size="9.5" fill="#94a3b8">Bypass / Volume automation</text>
+
+            <rect x="615" y="226" width="190" height="70" rx="5" fill="#162238" stroke="#34d399" stroke-opacity="0.4" stroke-width="1"/>
+            <text x="625" y="246" font-family="'Liberation Sans', sans-serif" font-size="12" font-weight="700" fill="#ffffff">Export Containers</text>
+            <text x="625" y="264" font-family="'Liberation Mono', monospace" font-size="10" fill="#facc15">MP4 · WebM · MKV · ProRes</text>
+            <text x="625" y="282" font-family="'Liberation Mono', monospace" font-size="9" fill="#94a3b8">Target bitrates &amp; multi-pass</text>
+
+            <!-- Bottom Airgap Shield -->
+            <rect x="20" y="325" width="800" height="38" rx="6" fill="#082015" stroke="#22c55e" stroke-opacity="0.6" stroke-width="1"/>
+            <text x="420" y="348" font-family="'Liberation Mono', monospace" font-size="11" font-weight="700" fill="#4ade80" text-anchor="middle">✔ ZERO-TELEMETRY BOUNDARY: ALL TIMELINE ASSETS STORED LOCALLY ON DISK · ZERO CLOUD API CALLS</text>
+          </svg>
+        </div>
+      </div>
+
       <ul>
         <li><strong>Backend Engine:</strong> Written in Rust, managing timeline state, rendering graphs, and file I/O.</li>
         <li><strong>Media Processing:</strong> Powered by GStreamer pipelines for decoding, filtering, and encoding.</li>

@@ -78,7 +78,106 @@ image: "/assets/images/projects/audio-labs-pro-mockup.png"
         <li><strong>Automation:</strong> Comprehensive CLI tools (`alp-cli`, `alp-infer`, `alp-mcp`) supporting scriptable workflows and Model Context Protocol integration.</li>
       </ul>
 
-      <h2>Technology Stack</h2>
+      <h2>Technology Stack & Audio Architecture</h2>
+      <p>
+        Audio Labs Pro enforces a strict isolation model where real-time audio threads are decoupled from AI inference processes and native GPU rendering:
+      </p>
+
+      <!-- Architecture Teardown Diagram -->
+      <div class="zv-teardown-schematic" aria-label="Audio Labs Pro Architecture Teardown">
+        <div class="zv-teardown-header">
+          <div class="zv-teardown-title-wrap">
+            <span class="zv-teardown-category">DSP PIPELINE TEARDOWN</span>
+            <span class="zv-teardown-subtitle">Lock-Free Audio Thread · CLAP/LV2 Host · Local ONNX AI</span>
+          </div>
+          <span class="zv-teardown-shield">🔒 ZERO AUDIO EGRESS</span>
+        </div>
+        <div class="zv-teardown-body">
+          <svg class="zv-teardown-svg" viewBox="0 0 840 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Column 1: Audio Input & Hardware Drivers -->
+            <rect x="20" y="20" width="220" height="290" rx="8" fill="#0c121d" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1.5"/>
+            <rect x="20" y="20" width="220" height="34" rx="8" fill="#141e2f"/>
+            <text x="130" y="42" font-family="'Liberation Mono', monospace" font-size="11" font-weight="700" fill="#7dd3fc" text-anchor="middle">1. HARDWARE &amp; DRIVERS</text>
+            
+            <rect x="35" y="70" width="190" height="52" rx="5" fill="#162238" stroke="#334155" stroke-width="1"/>
+            <text x="45" y="90" font-family="'Liberation Sans', sans-serif" font-size="12" font-weight="700" fill="#ffffff">cpal Audio Bridge</text>
+            <text x="45" y="106" font-family="'Liberation Mono', monospace" font-size="10" fill="#38bdf8">ALSA · Pulse · PipeWire</text>
+            <text x="45" y="117" font-family="'Liberation Mono', monospace" font-size="9" fill="#94a3b8">Low-latency buffer management</text>
+
+            <rect x="35" y="132" width="190" height="56" rx="5" fill="#162238" stroke="#334155" stroke-width="1"/>
+            <text x="45" y="152" font-family="'Liberation Sans', sans-serif" font-size="12" font-weight="700" fill="#ffffff">Native GUI Shell</text>
+            <text x="45" y="168" font-family="'Liberation Mono', monospace" font-size="10" fill="#34d399">iced 0.14 + kit (GPU)</text>
+            <text x="45" y="181" font-family="'Liberation Mono', monospace" font-size="9" fill="#94a3b8">WGPU pipeline · 0 electron overhead</text>
+
+            <rect x="35" y="198" width="190" height="54" rx="5" fill="#162238" stroke="#334155" stroke-width="1"/>
+            <text x="45" y="218" font-family="'Liberation Sans', sans-serif" font-size="12" font-weight="700" fill="#ffffff">Automation &amp; MCP</text>
+            <text x="45" y="234" font-family="'Liberation Mono', monospace" font-size="10" fill="#ffa5d0">alp-cli · alp-mcp (14 tools)</text>
+            <text x="45" y="246" font-family="'Liberation Mono', monospace" font-size="9" fill="#94a3b8">Model Context Protocol server</text>
+
+            <rect x="35" y="262" width="190" height="34" rx="5" fill="#101828" stroke="rgba(56,189,248,0.3)" stroke-width="1"/>
+            <text x="130" y="284" font-family="'Liberation Mono', monospace" font-size="10" fill="#7dd3fc" text-anchor="middle">Rust 1.89+ Toolchain</text>
+
+            <!-- Arrow 1 -> 2: Lock-free ringbuffer -->
+            <path d="M 240,150 L 290,150" stroke="#38bdf8" stroke-width="2"/>
+            <polygon points="295,150 285,145 285,155" fill="#38bdf8"/>
+            <text x="267" y="140" font-family="'Liberation Mono', monospace" font-size="9" fill="#38bdf8" text-anchor="middle">Ringbuffer</text>
+            <text x="267" y="170" font-family="'Liberation Mono', monospace" font-size="8.5" fill="#94a3b8" text-anchor="middle">Lock-Free</text>
+
+            <!-- Column 2: Real-time Audio Safe Core -->
+            <rect x="295" y="20" width="250" height="290" rx="8" fill="#0d1624" stroke="#38bdf8" stroke-opacity="0.6" stroke-width="1.8"/>
+            <rect x="295" y="20" width="250" height="34" rx="8" fill="#16243b"/>
+            <text x="420" y="42" font-family="'Liberation Mono', monospace" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">2. REAL-TIME SAFE CORE</text>
+
+            <rect x="310" y="70" width="220" height="66" rx="5" fill="#14243d" stroke="#34d399" stroke-opacity="0.4" stroke-width="1"/>
+            <text x="320" y="90" font-family="'Liberation Sans', sans-serif" font-size="12" font-weight="700" fill="#ffffff">Hard Real-Time Guarantees</text>
+            <text x="320" y="106" font-family="'Liberation Mono', monospace" font-size="10" fill="#34d399">ZERO Allocations in Callback</text>
+            <text x="320" y="120" font-family="'Liberation Mono', monospace" font-size="9.5" fill="#94a3b8">Zero locks · Zero blocking syscalls</text>
+            <text x="320" y="132" font-family="'Liberation Mono', monospace" font-size="9" fill="#e2e8f0">Deterministic latency &lt; 5.3ms</text>
+
+            <rect x="310" y="146" width="220" height="68" rx="5" fill="#14243d" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1"/>
+            <text x="320" y="166" font-family="'Liberation Sans', sans-serif" font-size="12" font-weight="700" fill="#ffffff">CLAP &amp; LV2 Plugin Host</text>
+            <text x="320" y="182" font-family="'Liberation Mono', monospace" font-size="10" fill="#38bdf8">alp-plugin engine</text>
+            <text x="320" y="196" font-family="'Liberation Mono', monospace" font-size="9.5" fill="#94a3b8">Dynamic C-ABI loading</text>
+            <text x="320" y="208" font-family="'Liberation Mono', monospace" font-size="9" fill="#e2e8f0">Pre-allocated scratch buffers</text>
+
+            <rect x="310" y="224" width="220" height="72" rx="5" fill="#14243d" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1"/>
+            <text x="320" y="244" font-family="'Liberation Sans', sans-serif" font-size="12" font-weight="700" fill="#ffffff">32-Bit Float Mixer Matrix</text>
+            <text x="320" y="260" font-family="'Liberation Mono', monospace" font-size="10" fill="#ffa5d0">Per-track volume · Pan · Mute · Solo</text>
+            <text x="320" y="276" font-family="'Liberation Mono', monospace" font-size="9.5" fill="#94a3b8">Peak &amp; True-RMS meter broadcast</text>
+
+            <!-- Arrow 2 -> 3: IPC to Isolated AI Process -->
+            <path d="M 545,150 L 595,150" stroke="#a855f7" stroke-width="2"/>
+            <polygon points="600,150 590,145 590,155" fill="#a855f7"/>
+            <text x="572" y="140" font-family="'Liberation Mono', monospace" font-size="9" fill="#a855f7" text-anchor="middle">Fork/IPC</text>
+            <text x="572" y="170" font-family="'Liberation Mono', monospace" font-size="8.5" fill="#94a3b8" text-anchor="middle">Isolated</text>
+
+            <!-- Column 3: Offline AI Inference Subsystem -->
+            <rect x="600" y="20" width="220" height="290" rx="8" fill="#130e1f" stroke="#a855f7" stroke-opacity="0.5" stroke-width="1.5"/>
+            <rect x="600" y="20" width="220" height="34" rx="8" fill="#1d1430"/>
+            <text x="710" y="42" font-family="'Liberation Mono', monospace" font-size="11" font-weight="700" fill="#c084fc" text-anchor="middle">3. OFFLINE LOCAL AI</text>
+
+            <rect x="615" y="70" width="190" height="66" rx="5" fill="#1e1432" stroke="#a855f7" stroke-opacity="0.4" stroke-width="1"/>
+            <text x="625" y="90" font-family="'Liberation Sans', sans-serif" font-size="12" font-weight="700" fill="#ffffff">Out-of-Process Core</text>
+            <text x="625" y="106" font-family="'Liberation Mono', monospace" font-size="10" fill="#c084fc">alp-infer standalone binary</text>
+            <text x="625" y="122" font-family="'Liberation Mono', monospace" font-size="9.5" fill="#94a3b8">Audio thread NEVER stutters</text>
+
+            <rect x="615" y="148" width="190" height="66" rx="5" fill="#1e1432" stroke="#a855f7" stroke-opacity="0.4" stroke-width="1"/>
+            <text x="625" y="168" font-family="'Liberation Sans', sans-serif" font-size="12" font-weight="700" fill="#ffffff">ONNX &amp; GGUF Engines</text>
+            <text x="625" y="184" font-family="'Liberation Mono', monospace" font-size="10" fill="#38bdf8">VoiceStudio clone weights</text>
+            <text x="625" y="200" font-family="'Liberation Mono', monospace" font-size="9.5" fill="#34d399">646 languages · 0 cloud latency</text>
+
+            <rect x="615" y="226" width="190" height="70" rx="5" fill="#1e1432" stroke="#a855f7" stroke-opacity="0.4" stroke-width="1"/>
+            <text x="625" y="246" font-family="'Liberation Sans', sans-serif" font-size="12" font-weight="700" fill="#ffffff">Master WAV/FLAC Out</text>
+            <text x="625" y="264" font-family="'Liberation Mono', monospace" font-size="10" fill="#facc15">Lossless export to NVMe</text>
+            <text x="625" y="282" font-family="'Liberation Mono', monospace" font-size="9" fill="#94a3b8">Bithooks &amp; metadata intact</text>
+
+            <!-- Bottom Airgap Shield -->
+            <rect x="20" y="325" width="800" height="38" rx="6" fill="#082015" stroke="#22c55e" stroke-opacity="0.6" stroke-width="1"/>
+            <text x="420" y="348" font-family="'Liberation Mono', monospace" font-size="11" font-weight="700" fill="#4ade80" text-anchor="middle">✔ ZERO AUDIO EGRESS: MICROPHONE STREAMS AND SYNTHESIS BUFFERS REMAIN 100% IN LOCAL MEMORY</text>
+          </svg>
+        </div>
+      </div>
+
       <ul>
         <li><strong>Language:</strong> Rust 1.89+ for memory safety and zero-cost abstractions.</li>
         <li><strong>Graphics & UI:</strong> Built with `iced 0.14 + kit` for a high-performance native GPU rendering pipeline.</li>
