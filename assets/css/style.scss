@@ -981,12 +981,26 @@ html[data-theme="light"] .zv-header {
 }
 
 .zv-footer-brand {
-  font-size: 18px;
-  font-weight: 800;
+  margin-bottom: 12px;
 }
 
-.zv-footer-brand span {
-  color: var(--zv-primary);
+.zv-footer-brand-link {
+  display: inline-block;
+  text-decoration: none;
+  transition: opacity var(--zv-transition), transform var(--zv-transition);
+}
+
+@media (hover: hover) {
+  .zv-footer-brand-link:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+  }
+}
+
+.zv-footer-logo {
+  width: 130px;
+  height: auto;
+  display: block;
 }
 
 .zv-footer p {
