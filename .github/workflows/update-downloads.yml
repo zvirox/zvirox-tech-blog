@@ -1,0 +1,52 @@
+name: Update Downloads Manifest
+
+on:
+  schedule:
+    # Run every 4 hours to poll for new GitHub releases
+    - cron: '0 */4 * * *'
+  workflow_dispatch:
+    # Allow manual execution anytime from the GitHub Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  update-manifest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run Manifest Tests
+        run: |
+          python -m unittest tests/test_update_release_manifest.py -v
+
+      - name: Fetch and Generate Release Manifest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python scripts/update_release_manifest.py
+
+      - name: Validate Generated Manifest JSON
+        run: |
+          python -m json.tool _data/release_manifest.json > /dev/null
+
+      - name: Commit and Push Changes If Manifest Updated
+        run: |
+          if ! git diff --quiet _data/release_manifest.json; then
+            echo "Release manifest changed, committing..."
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add _data/release_manifest.json
+            git commit -m "chore(downloads): auto-update release manifest [skip ci]"
+            git push origin ${{ github.ref_name }}
+          else
+            echo "No changes detected in release manifest."
+          fi
