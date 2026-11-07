@@ -5,7 +5,7 @@
 Zvirox is an independent open-source software project founded and maintained solo by Prakashpuri Gauswami (@Prakash) in Gujarat, India. The project builds high-performance, local-first applications designed for Linux and Android TV that respect user privacy, send zero telemetry, and ship Model Context Protocol (MCP) servers so AI coding agents can operate them natively.
 
 Website: https://zvirox.in
-Contact: info@zvirox.in
+Contact: info@zvirox.in | zvirox@proton.me
 GitHub Organization: https://github.com/zvirox
 
 ## Open-Source Software Projects

@@ -279,8 +279,12 @@ permalink: /about/
         <span class="zv-verification-value"><a href="https://zvirox.in">zvirox.in</a></span>
       </div>
       <div class="zv-verification-row">
-        <span class="zv-verification-label">Contact Email</span>
+        <span class="zv-verification-label">Project Inquiries</span>
         <span class="zv-verification-value"><a href="mailto:info@zvirox.in">info@zvirox.in</a></span>
+      </div>
+      <div class="zv-verification-row">
+        <span class="zv-verification-label">Direct & Security</span>
+        <span class="zv-verification-value"><a href="mailto:zvirox@proton.me">zvirox@proton.me</a></span>
       </div>
       <div class="zv-verification-row">
         <span class="zv-verification-label">GitHub Profile</span>
@@ -323,6 +327,9 @@ permalink: /about/
         </a>
         <a href="mailto:info@zvirox.in" class="zv-button zv-button-secondary">
           info@zvirox.in
+        </a>
+        <a href="mailto:zvirox@proton.me" class="zv-button zv-button-secondary">
+          zvirox@proton.me
         </a>
       </div>
 

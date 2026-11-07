@@ -74,13 +74,13 @@ permalink: /contact/
             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
           </svg>
         </div>
-        <h3 class="zv-feature-title">Security Reports</h3>
+        <h3 class="zv-feature-title">Security & Direct Inquiries</h3>
         <p class="zv-feature-desc">
-          If you discover a security vulnerability in any Zvirox application, please report it responsibly before public disclosure.
+          For responsible security disclosures, vulnerability reports, or confidential communications, contact directly via encrypted mail:
         </p>
         <p style="margin-top:16px;">
-          <a href="https://github.com/zvirox/easy-edits-pro/blob/main/SECURITY.md" target="_blank" rel="noopener noreferrer" class="zv-section-link">
-            Review SECURITY.md policy ↗
+          <a href="mailto:zvirox@proton.me" class="zv-button zv-button-primary" style="font-size:13px;">
+            zvirox@proton.me
           </a>
         </p>
       </div>
@@ -115,8 +115,12 @@ permalink: /contact/
         <span class="zv-verification-value"><a href="https://zvirox.in">https://zvirox.in</a></span>
       </div>
       <div class="zv-verification-row">
-        <span class="zv-verification-label">Public Email</span>
+        <span class="zv-verification-label">Project Inquiries</span>
         <span class="zv-verification-value"><a href="mailto:info@zvirox.in">info@zvirox.in</a></span>
+      </div>
+      <div class="zv-verification-row">
+        <span class="zv-verification-label">Direct & Security</span>
+        <span class="zv-verification-value"><a href="mailto:zvirox@proton.me">zvirox@proton.me</a></span>
       </div>
       <div class="zv-verification-row">
         <span class="zv-verification-label">GitHub Organization</span>
