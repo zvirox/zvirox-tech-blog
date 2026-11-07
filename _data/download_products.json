@@ -1,0 +1,144 @@
+[
+  {
+    "id": "eep",
+    "name": "Easy Edits Pro",
+    "tagline": "Next-gen timeline video editor for Linux",
+    "description": "GPU-accelerated, native Linux video editing suite built with Rust, GTK4, and Libadwaita. Fast cutting, precise multi-track timeline, and hardware NVENC/VAAPI rendering.",
+    "repo": "zvirox/easy-edits-pro",
+    "project_url": "/projects/eep/",
+    "license": "AGPL-3.0",
+    "allow_prerelease": true,
+    "platform_requirements": "Linux 64-bit (glibc 2.35+ or Flatpak runtime 24.08)",
+    "asset_rules": [
+      {
+        "id": "flatpak",
+        "label": "Flatpak (Universal)",
+        "platform": "Linux (All Distros)",
+        "icon": "box",
+        "pattern": "^.*\\.flatpak$"
+      },
+      {
+        "id": "deb",
+        "label": "DEB Package",
+        "platform": "Debian / Ubuntu / Mint",
+        "icon": "package",
+        "pattern": "^.*_amd64\\.deb$"
+      },
+      {
+        "id": "rpm",
+        "label": "RPM Package",
+        "platform": "Fedora / RHEL / openSUSE",
+        "icon": "package",
+        "pattern": "^.*\\.x86_64\\.rpm$"
+      }
+    ],
+    "checksum_patterns": [
+      "^SHA256SUMS$",
+      "^sha256sums\\.txt$",
+      "^.*\\.sha256$"
+    ]
+  },
+  {
+    "id": "alp",
+    "name": "Audio Labs Pro",
+    "tagline": "Voice audio workstation & studio cleanup for Linux",
+    "description": "Professional voice isolation, multi-track audio surgical editing, spectral de-noising, and local AI voice model processing natively on the Linux desktop.",
+    "repo": "zvirox/audio-labs-pro",
+    "project_url": "/projects/alp/",
+    "license": "Apache-2.0",
+    "allow_prerelease": true,
+    "platform_requirements": "Linux 64-bit (PipeWire / ALSA audio backend)",
+    "asset_rules": [
+      {
+        "id": "flatpak",
+        "label": "Flatpak (Universal)",
+        "platform": "Linux (All Distros)",
+        "icon": "box",
+        "pattern": "^.*\\.flatpak$"
+      },
+      {
+        "id": "deb",
+        "label": "DEB Package",
+        "platform": "Debian / Ubuntu / Mint",
+        "icon": "package",
+        "pattern": "^.*_amd64\\.deb$"
+      },
+      {
+        "id": "rpm",
+        "label": "RPM Package",
+        "platform": "Fedora / RHEL / openSUSE",
+        "icon": "package",
+        "pattern": "^.*\\.x86_64\\.rpm$"
+      }
+    ],
+    "checksum_patterns": [
+      "^SHA256SUMS$",
+      "^sha256sums\\.txt$",
+      "^.*\\.sha256$"
+    ]
+  },
+  {
+    "id": "ssp",
+    "name": "Screen Studio Pro",
+    "tagline": "Smooth motion-blur screen recorder for Linux",
+    "description": "Professional screen recorder with automatic cursor smoothing, dynamic zoom-and-follow, and 60fps hardware encoding on Wayland and PipeWire.",
+    "repo": "zvirox/screen-studio-pro",
+    "project_url": "/projects/ssp/",
+    "license": "MIT",
+    "allow_prerelease": false,
+    "platform_requirements": "Wayland / PipeWire compositor with Vulkan/EGL support",
+    "asset_rules": [
+      {
+        "id": "flatpak",
+        "label": "Flatpak (Universal)",
+        "platform": "Linux (All Distros)",
+        "icon": "box",
+        "pattern": "^.*\\.flatpak$"
+      },
+      {
+        "id": "deb",
+        "label": "DEB Package",
+        "platform": "Debian / Ubuntu / Mint",
+        "icon": "package",
+        "pattern": "^.*_amd64\\.deb$"
+      },
+      {
+        "id": "rpm",
+        "label": "RPM Package",
+        "platform": "Fedora / RHEL / openSUSE",
+        "icon": "package",
+        "pattern": "^.*\\.x86_64\\.rpm$"
+      }
+    ],
+    "checksum_patterns": [
+      "^SHA256SUMS$",
+      "^sha256sums\\.txt$",
+      "^.*\\.sha256$"
+    ]
+  },
+  {
+    "id": "ytf",
+    "name": "Your TV Friend",
+    "tagline": "Privacy-first Android TV launcher & debloat suite",
+    "description": "Ultra-lightweight (<250 KB) Material 3 Expressive launcher, zero-tracker TV feed, and safe non-destructive TV debloating toolkit for Google TV and Android TV boxes.",
+    "repo": "zvirox/your-tv-friend",
+    "project_url": "/projects/ytf/",
+    "license": "MIT",
+    "allow_prerelease": false,
+    "platform_requirements": "Android 8.0+ (Oreo) or higher (ARM64 / ARMv7 / x86)",
+    "asset_rules": [
+      {
+        "id": "apk",
+        "label": "Android APK Installer",
+        "platform": "Android TV & Google TV 8.0+",
+        "icon": "smartphone",
+        "pattern": "^(Your-UI-v.*\\.apk|app-release\\.apk)$"
+      }
+    ],
+    "checksum_patterns": [
+      "^.*\\.apk\\.sha256$",
+      "^SHA256SUMS$",
+      "^sha256sums\\.txt$"
+    ]
+  }
+]

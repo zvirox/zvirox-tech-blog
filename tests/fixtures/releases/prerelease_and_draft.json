@@ -1,0 +1,57 @@
+[
+  {
+    "id": 102,
+    "tag_name": "v0.2.0-draft",
+    "name": "Easy Edits Pro v0.2.0 Draft",
+    "draft": true,
+    "prerelease": false,
+    "published_at": null,
+    "html_url": "https://github.com/zvirox/easy-edits-pro/releases/tag/v0.2.0-draft",
+    "body": "Unpublished draft should be excluded strictly.",
+    "assets": []
+  },
+  {
+    "id": 103,
+    "tag_name": "v0.1.1-alpha.1",
+    "name": "Easy Edits Pro v0.1.1-alpha.1",
+    "draft": false,
+    "prerelease": true,
+    "published_at": "2026-10-27T13:48:41Z",
+    "html_url": "https://github.com/zvirox/easy-edits-pro/releases/tag/v0.1.1-alpha.1",
+    "body": "Alpha release of Easy Edits Pro timeline engine.\n\n* Multi-track video timeline\n* Hardware accelerated decode",
+    "assets": [
+      {
+        "id": 203,
+        "name": "easy-edits-pro-linux-x86_64.flatpak",
+        "size": 5970024,
+        "content_type": "application/vnd.flatpak",
+        "digest": "sha256:7cfb2b38d6d2727a083360f3d861e7cb429ef1b6be67f507cec0dadd5a866fb3",
+        "browser_download_url": "https://github.com/zvirox/easy-edits-pro/releases/download/v0.1.1-alpha.1/easy-edits-pro-linux-x86_64.flatpak"
+      },
+      {
+        "id": 204,
+        "name": "Easy.Edits.Pro_0.1.1-alpha.1_amd64.deb",
+        "size": 9175040,
+        "content_type": "application/x-debian-package",
+        "digest": "sha256:82bca821033b006c99c512efab58bbcae1b12b55b9bc5fbcfeea007b895ea9be",
+        "browser_download_url": "https://github.com/zvirox/easy-edits-pro/releases/download/v0.1.1-alpha.1/Easy.Edits.Pro_0.1.1-alpha.1_amd64.deb"
+      },
+      {
+        "id": 205,
+        "name": "Easy.Edits.Pro-0.1.1-alpha.1-1.x86_64.rpm",
+        "size": 9175040,
+        "content_type": "application/x-rpm",
+        "digest": "sha256:1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b",
+        "browser_download_url": "https://github.com/zvirox/easy-edits-pro/releases/download/v0.1.1-alpha.1/Easy.Edits.Pro-0.1.1-alpha.1-1.x86_64.rpm"
+      },
+      {
+        "id": 206,
+        "name": "SHA256SUMS",
+        "size": 260,
+        "content_type": "text/plain",
+        "digest": "sha256:3344556677889900aabbccddeeff11223344556677889900aabbccddeeff1122",
+        "browser_download_url": "https://github.com/zvirox/easy-edits-pro/releases/download/v0.1.1-alpha.1/SHA256SUMS"
+      }
+    ]
+  }
+]

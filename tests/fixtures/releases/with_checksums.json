@@ -1,0 +1,38 @@
+[
+  {
+    "id": 104,
+    "tag_name": "v0.0.1-alpha.2",
+    "name": "Audio Labs Pro v0.0.1-alpha.2",
+    "draft": false,
+    "prerelease": true,
+    "published_at": "2026-10-29T03:29:17Z",
+    "html_url": "https://github.com/zvirox/audio-labs-pro/releases/tag/v0.0.1-alpha.2",
+    "body": "Audio Labs Pro v0.0.1-alpha.2 — voice audio workstation for Linux.\n\n## Packages\n- `.deb` — Debian/Ubuntu (amd64)\n- `.rpm` — Fedora/openSUSE (x86_64)\n- `.flatpak` — any distribution",
+    "assets": [
+      {
+        "id": 207,
+        "name": "Audio-Labs-Pro-0.0.1-alpha.2-x86_64.flatpak",
+        "size": 8939312,
+        "content_type": "application/vnd.flatpak",
+        "digest": "sha256:ffc69b65d49103a13763b2a472d1d7d29ae15f106fee7f168cd471643c93cef0",
+        "browser_download_url": "https://github.com/zvirox/audio-labs-pro/releases/download/v0.0.1-alpha.2/Audio-Labs-Pro-0.0.1-alpha.2-x86_64.flatpak"
+      },
+      {
+        "id": 208,
+        "name": "audio-labs-pro_0.0.1-alpha.2_amd64.deb",
+        "size": 11010048,
+        "content_type": "application/x-debian-package",
+        "digest": "sha256:831f981653dd0b6afbfa7392d3ea1a36506e324019238e62d793c446253c865e",
+        "browser_download_url": "https://github.com/zvirox/audio-labs-pro/releases/download/v0.0.1-alpha.2/audio-labs-pro_0.0.1-alpha.2_amd64.deb"
+      },
+      {
+        "id": 209,
+        "name": "sha256sums.txt",
+        "size": 323,
+        "content_type": "text/plain",
+        "digest": "sha256:41e506a636d54a0c8c8399bc076a52eb072679bad6e400d419fb0315734beb8e",
+        "browser_download_url": "https://github.com/zvirox/audio-labs-pro/releases/download/v0.0.1-alpha.2/sha256sums.txt"
+      }
+    ]
+  }
+]
