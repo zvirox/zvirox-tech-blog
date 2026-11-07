@@ -107,6 +107,10 @@
           Projects
         </a>
 
+        <a href="{{ '/downloads/' | relative_url }}" class="{% if page.url contains '/downloads/' %}active{% endif %}" {% if page.url contains '/downloads/' %}aria-current="page"{% endif %}>
+          Downloads
+        </a>
+
         <a href="{{ '/guides/' | relative_url }}" class="{% if page.url contains '/guides/' or page.url contains '/articles/' or page.layout == 'post' %}active{% endif %}" {% if page.url contains '/guides/' or page.url contains '/articles/' or page.layout == 'post' %}aria-current="page"{% endif %}>
           Guides
         </a>
@@ -196,6 +200,10 @@
       <nav class="zv-mobile-nav" aria-label="Mobile navigation">
         <a href="{{ '/projects/' | relative_url }}" class="{% if page.url contains '/projects/' %}active{% endif %}">
           <span>Projects</span>
+          <span class="zv-mobile-nav-arrow" aria-hidden="true">→</span>
+        </a>
+        <a href="{{ '/downloads/' | relative_url }}" class="{% if page.url contains '/downloads/' %}active{% endif %}">
+          <span>Downloads</span>
           <span class="zv-mobile-nav-arrow" aria-hidden="true">→</span>
         </a>
         <a href="{{ '/guides/' | relative_url }}" class="{% if page.url contains '/guides/' or page.url contains '/articles/' or page.layout == 'post' %}active{% endif %}">
@@ -325,6 +333,10 @@
           <h3>Learn & Code</h3>
 
           <div class="zv-footer-links">
+
+            <a href="{{ '/downloads/' | relative_url }}">
+              Downloads Portal
+            </a>
 
             <a href="{{ '/guides/' | relative_url }}">
               Guides

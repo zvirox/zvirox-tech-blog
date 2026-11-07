@@ -1,0 +1,33 @@
+<div class="zv-release-history">
+  <details class="zv-history-accordion">
+    <summary class="zv-history-summary">
+      <span>Previous Releases ({{ include.history.size }})</span>
+      <span class="zv-history-arrow" aria-hidden="true">▾</span>
+    </summary>
+    <div class="zv-history-body">
+      <ul class="zv-history-list">
+        {% for rel in include.history %}
+        <li class="zv-history-item">
+          <div class="zv-history-meta">
+            <span class="zv-history-tag">{{ rel.tag_name }}</span>
+            {% if rel.prerelease %}
+            <span class="zv-badge zv-badge-alpha-sm">Alpha</span>
+            {% else %}
+            <span class="zv-badge zv-badge-stable-sm">Stable</span>
+            {% endif %}
+            <span class="zv-history-date">{{ rel.published_at | slice: 0, 10 }}</span>
+          </div>
+          <a href="{{ rel.html_url }}" target="_blank" rel="noopener noreferrer" class="zv-history-link">
+            Release Notes ↗
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+      <div class="zv-history-footer">
+        <a href="{{ include.releases_url }}" target="_blank" rel="noopener noreferrer" class="zv-link-subtle">
+          View all releases on GitHub &rarr;
+        </a>
+      </div>
+    </div>
+  </details>
+</div>

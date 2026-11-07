@@ -1,0 +1,134 @@
+<section id="{{ include.product.id }}" class="zv-download-section">
+  <div class="zv-download-card">
+    <!-- Header -->
+    <div class="zv-download-card-header">
+      <div class="zv-download-card-title-group">
+        <div class="zv-card-category">{{ include.product.license }} &bull; OPEN SOURCE</div>
+        <h2 class="zv-download-product-name">
+          <a href="{{ include.product.project_url | relative_url }}">{{ include.product.name }}</a>
+        </h2>
+        <p class="zv-download-product-tagline">{{ include.product.tagline }}</p>
+      </div>
+
+      <div class="zv-download-status-pills">
+        {% if include.manifest_proj.status == 'available' and include.manifest_proj.latest %}
+          {% if include.manifest_proj.latest.prerelease %}
+            <span class="zv-badge zv-badge-alpha" title="Active Alpha Build">Alpha</span>
+          {% else %}
+            <span class="zv-badge zv-badge-stable" title="Production Stable Build">Stable</span>
+          {% endif %}
+          <span class="zv-badge zv-badge-version">{{ include.manifest_proj.latest.tag_name }}</span>
+        {% else %}
+          <span class="zv-badge zv-badge-planning">In Specification</span>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- Description & System Requirements -->
+    <div class="zv-download-description">
+      <p>{{ include.product.description }}</p>
+      <div class="zv-download-requirements">
+        <span class="zv-req-label">Requirements:</span>
+        <span class="zv-req-value">{{ include.product.platform_requirements }}</span>
+      </div>
+    </div>
+
+    <!-- Main Content Area -->
+    {% if include.manifest_proj.status == 'available' and include.manifest_proj.latest and include.manifest_proj.latest.assets.size > 0 %}
+      <div class="zv-download-assets-grid">
+        {% for asset in include.manifest_proj.latest.assets %}
+        <div class="zv-asset-card">
+          <div class="zv-asset-header">
+            <div class="zv-asset-icon-box">
+              {% if asset.icon == 'smartphone' %}
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+              {% elsif asset.icon == 'box' %}
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+              {% else %}
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"/><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+              {% endif %}
+            </div>
+            <div class="zv-asset-titles">
+              <span class="zv-asset-label">{{ asset.label }}</span>
+              <span class="zv-asset-platform">{{ asset.platform }}</span>
+            </div>
+          </div>
+
+          <div class="zv-asset-meta">
+            <span class="zv-asset-filename" title="{{ asset.name }}">{{ asset.name }}</span>
+            <span class="zv-asset-size">
+              {% assign mb_size = asset.size | divided_by: 1048576.0 %}
+              {{ mb_size | round: 2 }} MB
+            </span>
+          </div>
+
+          <div class="zv-asset-actions">
+            <a href="{{ asset.browser_download_url }}" class="zv-button zv-button-primary zv-download-action-btn" download>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <span>Download</span>
+            </a>
+          </div>
+
+          {% if asset.sha256 %}
+          <div class="zv-asset-checksum">
+            <details class="zv-checksum-accordion">
+              <summary class="zv-checksum-toggle">SHA-256 Checksum</summary>
+              <div class="zv-checksum-content">
+                <code>{{ asset.sha256 }}</code>
+              </div>
+            </details>
+          </div>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+
+      <!-- Release Summary Box -->
+      <div class="zv-release-summary-card">
+        <div class="zv-summary-header">
+          <span class="zv-summary-title">Release Notes ({{ include.manifest_proj.latest.tag_name }})</span>
+          <a href="{{ include.manifest_proj.latest.html_url }}" target="_blank" rel="noopener noreferrer" class="zv-link-subtle">
+            Full GitHub Release ↗
+          </a>
+        </div>
+        <p class="zv-summary-text">{{ include.manifest_proj.latest.summary | escape }}</p>
+      </div>
+
+    {% elsif include.manifest_proj.status == 'planning' %}
+      <!-- Planning / In Development State -->
+      <div class="zv-planning-box">
+        <div class="zv-planning-badge">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <span>Active Engineering & Spec</span>
+        </div>
+        <p class="zv-planning-msg">
+          Pre-built binaries for {{ include.product.name }} have not been tagged for release yet. Development is actively ongoing with open architecture specifications.
+        </p>
+        <div class="zv-planning-links">
+          <a href="{{ include.product.project_url | relative_url }}" class="zv-button zv-button-secondary">
+            Read Architecture &amp; Teardown &rarr;
+          </a>
+          <a href="https://github.com/{{ include.product.repo }}" target="_blank" rel="noopener noreferrer" class="zv-button zv-button-secondary">
+            GitHub Repository ↗
+          </a>
+        </div>
+      </div>
+    {% endif %}
+
+    <!-- Footer of the card: Release History & Docs -->
+    <div class="zv-download-card-footer">
+      {% if include.manifest_proj.history.size > 0 %}
+        {% include downloads/release-history.html history=include.manifest_proj.history releases_url=include.manifest_proj.releases_url %}
+      {% endif %}
+
+      <div class="zv-download-secondary-links">
+        <a href="{{ include.product.project_url | relative_url }}" class="zv-link-subtle">
+          Project Deep Dive &rarr;
+        </a>
+        <a href="https://github.com/{{ include.product.repo }}" target="_blank" rel="noopener noreferrer" class="zv-link-subtle">
+          Source Repository ↗
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
