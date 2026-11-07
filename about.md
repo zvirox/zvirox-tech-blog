@@ -43,23 +43,44 @@ permalink: /about/
     <div class="zv-content">
       
       <p>
-        I'm <strong>Prakashpuri Gauswami</strong> (@Prakash), a solo developer, Linux enthusiast, 
-        and IT professional. I love the Linux desktop and created Zvirox to build fast, beautiful, 
-        and agent-ready applications for Linux and Android TV.
+        I'm <strong>Prakashpuri Gauswami</strong> (@Prakash) — a cybersecurity-focused IT professional, 
+        BCA graduate, and agentic AI builder based in Gujarat, India. I am passionate about Linux, the 
+        Android ecosystem, multimedia creation, and practical defensive security.
       </p>
 
       <p>
-        Modern creative software on Linux should be responsive, privacy-respecting, and designed for 
-        the future. By combining modern systems programming in <strong>Rust</strong> with native 
-        multimedia engines like <strong>GStreamer</strong> and <strong>iced</strong>, and pairing them 
-        with first-party <strong>Model Context Protocol (MCP)</strong> servers, Zvirox applications are 
-        built to run entirely on your own hardware while remaining automatable by AI coding agents.
+        <strong>My approach to building software:</strong> I am an agentic builder and "vibe coder" who 
+        knows how to direct, architect, and orchestrate AI coding agents to produce production-grade, 
+        working software. Rather than writing every line of syntax manually from memory, I harness modern 
+        agentic AI to build real applications. Building these applications serves three core purposes:
+      </p>
+
+      <ul>
+        <li>
+          <strong>Hands-on Security & Vulnerability Auditing:</strong> Building full-stack desktop and TV applications 
+          allows me to analyze threat models, inspect software architectures, test IPC boundaries, and find security 
+          loopholes first-hand — transforming theoretical cybersecurity concepts into deep, practical defensive intuition.
+        </li>
+        <li>
+          <strong>Tools I Love to Use:</strong> As an enthusiast of video and audio editing, I wanted fast, 
+          privacy-respecting, local-first tools for the Linux desktop that don't depend on proprietary cloud subscriptions.
+        </li>
+        <li>
+          <strong>Giving Back to Open Source:</strong> Free, transparent software for fellow Linux and Android users 
+          who care about privacy and owning their hardware.
+        </li>
+      </ul>
+
+      <p>
+        <strong>My Professional Direction:</strong> My core career path and long-term goal is to grow as a 
+        skilled <strong>Cybersecurity Professional in Blue Team operations (SOC Analyst, SIEM monitoring, threat detection, incident response)</strong>, 
+        expanding into cloud security and AI security. My software building is an active extension of that mission.
       </p>
 
       <p class="zv-about-philosophy">
-        <strong>How Zvirox is run:</strong> Zvirox is a solo, unregistered, non-commercial open-source project. 
-        There is no venture capital, no corporate sponsor, and no hidden tracking. 
-        Development is supported directly by community contributors and <a href="https://github.com/sponsors/zvirox" target="_blank" rel="noopener noreferrer">GitHub Sponsors</a>.
+        <strong>How Zvirox is run:</strong> Zvirox is an independent, non-commercial open-source project. 
+        There is no venture capital, no corporate sponsor, and zero telemetry. 
+        Development is supported directly by community feedback and <a href="https://github.com/sponsors/zvirox" target="_blank" rel="noopener noreferrer">GitHub Sponsors</a>.
       </p>
 
     </div>
