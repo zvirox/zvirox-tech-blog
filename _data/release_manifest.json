@@ -1,0 +1,215 @@
+{
+  "generated_at": "2026-11-07T07:15:29Z",
+  "projects": [
+    {
+      "id": "eep",
+      "name": "Easy Edits Pro",
+      "repo": "zvirox/easy-edits-pro",
+      "project_url": "/projects/eep/",
+      "releases_url": "https://github.com/zvirox/easy-edits-pro/releases",
+      "status": "available",
+      "latest": {
+        "tag_name": "v0.1.1-alpha.1",
+        "name": "Easy Edits Pro v0.1.1-alpha.1",
+        "published_at": "2026-10-27T13:48:41Z",
+        "html_url": "https://github.com/zvirox/easy-edits-pro/releases/tag/v0.1.1-alpha.1",
+        "prerelease": true,
+        "summary": "Latest release with performance improvements and bug fixes.",
+        "assets": [
+          {
+            "rule_id": "flatpak",
+            "label": "Flatpak (Universal)",
+            "platform": "Linux (All Distros)",
+            "icon": "box",
+            "name": "easy-edits-pro-linux-x86_64.flatpak",
+            "size": 5970024,
+            "browser_download_url": "https://github.com/zvirox/easy-edits-pro/releases/download/v0.1.1-alpha.1/easy-edits-pro-linux-x86_64.flatpak",
+            "sha256": "7cfb2b38d6d2727a083360f3d861e7cb429ef1b6be67f507cec0dadd5a866fb3"
+          },
+          {
+            "rule_id": "deb",
+            "label": "DEB Package",
+            "platform": "Debian / Ubuntu / Mint",
+            "icon": "package",
+            "name": "Easy.Edits.Pro_0.1.1-alpha.1_amd64.deb",
+            "size": 8757012,
+            "browser_download_url": "https://github.com/zvirox/easy-edits-pro/releases/download/v0.1.1-alpha.1/Easy.Edits.Pro_0.1.1-alpha.1_amd64.deb",
+            "sha256": "9c6bfcd896d9c41130b06ce4ee5c8706d06dd2785bfdb41660ed12163879215e"
+          },
+          {
+            "rule_id": "rpm",
+            "label": "RPM Package",
+            "platform": "Fedora / RHEL / openSUSE",
+            "icon": "package",
+            "name": "Easy.Edits.Pro-0.1.1-alpha.1-1.x86_64.rpm",
+            "size": 8759438,
+            "browser_download_url": "https://github.com/zvirox/easy-edits-pro/releases/download/v0.1.1-alpha.1/Easy.Edits.Pro-0.1.1-alpha.1-1.x86_64.rpm",
+            "sha256": "507b7c02873ce0692d1d2ee8b753a2ad6ed2300a0b818eca9c5de3b16709912c"
+          }
+        ]
+      },
+      "history": [
+        {
+          "tag_name": "v0.1.1-alpha.1",
+          "name": "Easy Edits Pro v0.1.1-alpha.1",
+          "published_at": "2026-10-27T13:48:41Z",
+          "html_url": "https://github.com/zvirox/easy-edits-pro/releases/tag/v0.1.1-alpha.1",
+          "prerelease": true
+        },
+        {
+          "tag_name": "v0.1.0-alpha.26",
+          "name": "Easy Edits Pro v0.1.0-alpha.26",
+          "published_at": "2026-10-27T04:10:40Z",
+          "html_url": "https://github.com/zvirox/easy-edits-pro/releases/tag/v0.1.0-alpha.26",
+          "prerelease": true
+        },
+        {
+          "tag_name": "v0.1.0-alpha.25",
+          "name": "Easy Edits Pro v0.1.0-alpha.25",
+          "published_at": "2026-10-27T03:31:16Z",
+          "html_url": "https://github.com/zvirox/easy-edits-pro/releases/tag/v0.1.0-alpha.25",
+          "prerelease": true
+        },
+        {
+          "tag_name": "v0.1.0-alpha.24",
+          "name": "Easy Edits Pro v0.1.0-alpha.24",
+          "published_at": "2026-10-27T02:40:32Z",
+          "html_url": "https://github.com/zvirox/easy-edits-pro/releases/tag/v0.1.0-alpha.24",
+          "prerelease": true
+        },
+        {
+          "tag_name": "v0.1.0-alpha.23",
+          "name": "Easy Edits Pro v0.1.0-alpha.23",
+          "published_at": "2026-10-26T07:47:24Z",
+          "html_url": "https://github.com/zvirox/easy-edits-pro/releases/tag/v0.1.0-alpha.23",
+          "prerelease": true
+        }
+      ]
+    },
+    {
+      "id": "alp",
+      "name": "Audio Labs Pro",
+      "repo": "zvirox/audio-labs-pro",
+      "project_url": "/projects/alp/",
+      "releases_url": "https://github.com/zvirox/audio-labs-pro/releases",
+      "status": "available",
+      "latest": {
+        "tag_name": "v0.0.1-alpha.2",
+        "name": "Audio Labs Pro v0.0.1-alpha.2",
+        "published_at": "2026-10-29T03:29:17Z",
+        "html_url": "https://github.com/zvirox/audio-labs-pro/releases/tag/v0.0.1-alpha.2",
+        "prerelease": true,
+        "summary": "Audio Labs Pro v0.0.1-alpha.2 — voice audio workstation for Linux. Packages `.deb` — Debian/Ubuntu (amd64) `.rpm` — Fedora/openSUSE (x86_64) `.flatpak` — any distribution (Freedesktop 24.08 runtime) Verify with `sha256sums.txt`. See CHANGEL...",
+        "assets": [
+          {
+            "rule_id": "flatpak",
+            "label": "Flatpak (Universal)",
+            "platform": "Linux (All Distros)",
+            "icon": "box",
+            "name": "Audio-Labs-Pro-0.0.1-alpha.2-x86_64.flatpak",
+            "size": 8939312,
+            "browser_download_url": "https://github.com/zvirox/audio-labs-pro/releases/download/v0.0.1-alpha.2/Audio-Labs-Pro-0.0.1-alpha.2-x86_64.flatpak",
+            "sha256": "ffc69b65d49103a13763b2a472d1d7d29ae15f106fee7f168cd471643c93cef0"
+          },
+          {
+            "rule_id": "deb",
+            "label": "DEB Package",
+            "platform": "Debian / Ubuntu / Mint",
+            "icon": "package",
+            "name": "audio-labs-pro_0.0.1-alpha.2_amd64.deb",
+            "size": 10579960,
+            "browser_download_url": "https://github.com/zvirox/audio-labs-pro/releases/download/v0.0.1-alpha.2/audio-labs-pro_0.0.1-alpha.2_amd64.deb",
+            "sha256": "f5d34f21df8c127eb2bda2237342159054c827fd64477f39a95ff0859be9dda1"
+          },
+          {
+            "rule_id": "rpm",
+            "label": "RPM Package",
+            "platform": "Fedora / RHEL / openSUSE",
+            "icon": "package",
+            "name": "audio-labs-pro-0.0.1.alpha.2-1.x86_64.rpm",
+            "size": 14578405,
+            "browser_download_url": "https://github.com/zvirox/audio-labs-pro/releases/download/v0.0.1-alpha.2/audio-labs-pro-0.0.1.alpha.2-1.x86_64.rpm",
+            "sha256": "e18db53a413e1886dff110f9285e7e71dd278b9f68ad20613a429cbb4a6ea68a"
+          }
+        ]
+      },
+      "history": [
+        {
+          "tag_name": "v0.0.1-alpha.2",
+          "name": "Audio Labs Pro v0.0.1-alpha.2",
+          "published_at": "2026-10-29T03:29:17Z",
+          "html_url": "https://github.com/zvirox/audio-labs-pro/releases/tag/v0.0.1-alpha.2",
+          "prerelease": true
+        },
+        {
+          "tag_name": "v0.0.1-alpha.1",
+          "name": "Audio Labs Pro v0.0.1-alpha.1",
+          "published_at": "2026-10-28T10:52:26Z",
+          "html_url": "https://github.com/zvirox/audio-labs-pro/releases/tag/v0.0.1-alpha.1",
+          "prerelease": true
+        }
+      ]
+    },
+    {
+      "id": "ssp",
+      "name": "Screen Studio Pro",
+      "repo": "zvirox/screen-studio-pro",
+      "project_url": "/projects/ssp/",
+      "releases_url": "https://github.com/zvirox/screen-studio-pro/releases",
+      "status": "planning",
+      "latest": null,
+      "history": []
+    },
+    {
+      "id": "ytf",
+      "name": "Your TV Friend",
+      "repo": "zvirox/your-tv-friend",
+      "project_url": "/projects/ytf/",
+      "releases_url": "https://github.com/zvirox/your-tv-friend/releases",
+      "status": "available",
+      "latest": {
+        "tag_name": "v0.0.3",
+        "name": "Your UI v0.0.3 (Stable Release)",
+        "published_at": "2026-10-30T04:10:01Z",
+        "html_url": "https://github.com/zvirox/your-tv-friend/releases/tag/v0.0.3",
+        "prerelease": false,
+        "summary": "The rename release. Climin TV Friend becomes Your TV Friend, and the launcher Climin UI becomes Your UI. Nothing about the launcher's behaviour changed: same screens, motion, geometry, icons, navigation, settings and features — only the nam...",
+        "assets": [
+          {
+            "rule_id": "apk",
+            "label": "Android APK Installer",
+            "platform": "Android TV & Google TV 8.0+",
+            "icon": "smartphone",
+            "name": "app-release.apk",
+            "size": 1405512,
+            "browser_download_url": "https://github.com/zvirox/your-tv-friend/releases/download/v0.0.3/app-release.apk",
+            "sha256": "c4c67e3683ed5efcc4b91e65ad2df33371fff9113cc7ade75f31f1c834d504ab"
+          }
+        ]
+      },
+      "history": [
+        {
+          "tag_name": "v0.0.3",
+          "name": "Your UI v0.0.3 (Stable Release)",
+          "published_at": "2026-10-30T04:10:01Z",
+          "html_url": "https://github.com/zvirox/your-tv-friend/releases/tag/v0.0.3",
+          "prerelease": false
+        },
+        {
+          "tag_name": "v0.0.2",
+          "name": "Climin UI v0.0.2 (Stable Release)",
+          "published_at": "2026-10-27T14:54:51Z",
+          "html_url": "https://github.com/zvirox/your-tv-friend/releases/tag/v0.0.2",
+          "prerelease": false
+        },
+        {
+          "tag_name": "v0.0.1",
+          "name": "Climin UI v0.0.1 (Stable Release)",
+          "published_at": "2026-10-25T17:28:37Z",
+          "html_url": "https://github.com/zvirox/your-tv-friend/releases/tag/v0.0.1",
+          "prerelease": false
+        }
+      ]
+    }
+  ]
+}
