@@ -6,6 +6,41 @@
 
   {% seo %}
 
+  <!-- Favicons and browser UI theme -->
+  <link rel="icon" type="image/png" href="{{ '/assets/images/zvirox-logo.png' | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ '/assets/images/zvirox-logo.png' | relative_url }}">
+  <meta name="theme-color" content="#0a0a0a">
+
+  <!-- Organization & Knowledge Graph Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zvirox",
+    "url": "https://zvirox.in/",
+    "logo": "https://zvirox.in/assets/images/zvirox-logo.png",
+    "description": "Open-source video, audio and TV software for Linux and Android TV.",
+    "founder": {
+      "@type": "Person",
+      "name": "Prakashpuri Gauswami",
+      "jobTitle": "Solo Maintainer",
+      "url": "https://zvirox.in/about/"
+    },
+    "sameAs": [
+      "https://github.com/zvirox",
+      "https://github.com/zvirox/easy-edits-pro",
+      "https://github.com/zvirox/audio-labs-pro",
+      "https://github.com/zvirox/screen-studio-pro",
+      "https://github.com/zvirox/your-tv-friend"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "info@zvirox.in",
+      "contactType": "technical support"
+    }
+  }
+  </script>
+
   <!-- Prevent theme flash on page load -->
   <script>
     (function () {

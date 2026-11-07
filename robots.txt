@@ -1,5 +1,27 @@
+# robots.txt for https://zvirox.in
+
 User-agent: *
 Allow: /
 
+# Search Engines & Answer Engines (Explicitly Allowed)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Sitemaps
 Sitemap: https://zvirox.in/sitemap/sitemap.xml
 Sitemap: https://zvirox.in/sitemap.xml

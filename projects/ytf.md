@@ -3,7 +3,27 @@ layout: default
 title: Your TV Friend | Zvirox
 description: A non-destructive Android TV cleanup tool and Your UI, a native television launcher, with reversible ADB-based package controls.
 permalink: /projects/ytf/
+image: "/assets/images/projects/your-tv-friend-mockup.png"
 ---
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Your TV Friend",
+  "operatingSystem": "Android TV",
+  "applicationCategory": "UtilitiesApplication",
+  "description": "A non-destructive Android TV cleanup tool and native television launcher (Your UI) with reversible ADB-based package controls, 5 visual themes, and 26 supported languages.",
+  "url": "https://zvirox.in/projects/ytf/",
+  "downloadUrl": "https://github.com/zvirox/your-tv-friend",
+  "license": "https://opensource.org/licenses/MIT",
+  "author": {
+    "@type": "Person",
+    "name": "Prakashpuri Gauswami",
+    "url": "https://zvirox.in/about/"
+  }
+}
+</script>
 
 <div class="zv-container">
 
@@ -22,7 +42,7 @@ permalink: /projects/ytf/
         </div>
       </header>
             <figure class="zv-project-visual">
-        <img class="zv-project-image" src="{{ '/assets/images/projects/your-tv-friend-mockup.png' | relative_url }}" alt="Your TV Friend Your UI concept screen with For You recommendations, five round glass controls, and a translucent app shelf over a cinematic landscape." decoding="async">
+        <img class="zv-project-image" src="{{ '/assets/images/projects/your-tv-friend-mockup.png' | relative_url }}" alt="Your TV Friend Your UI concept screen with For You recommendations, five round glass controls, and a translucent app shelf over a cinematic landscape." width="1200" height="675" loading="lazy" decoding="async">
         <figcaption class="zv-project-caption">Concept mockup inspired by Your UI's Glass UI home-screen layout.</figcaption>
       </figure>
     </section>

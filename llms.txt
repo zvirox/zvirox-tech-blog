@@ -1,0 +1,44 @@
+# Zvirox
+
+> Open-source video, audio, and TV software for Linux and Android TV.
+
+Zvirox is an independent open-source software project founded and maintained solo by Prakashpuri Gauswami (@Prakash) in Gujarat, India. The project builds high-performance, local-first applications designed for Linux and Android TV that respect user privacy, send zero telemetry, and ship Model Context Protocol (MCP) servers so AI coding agents can operate them natively.
+
+Website: https://zvirox.in
+Contact: info@zvirox.in
+GitHub Organization: https://github.com/zvirox
+
+## Open-Source Software Projects
+
+- [Easy Edits Pro (EEP)](https://zvirox.in/projects/eep/): Active alpha Linux desktop video editor built with Rust, Tauri, React, and GStreamer. Combines a multitrack timeline with a Rust-owned transactional project model. Shipped with 440 editor commands, 7 workspaces, a CLI, and an MCP server. AGPL-3.0 with commercial licensing option.
+  - Repository: https://github.com/zvirox/easy-edits-pro
+- [Audio Labs Pro (ALP)](https://zvirox.in/projects/alp/): Alpha v0.0.1 Linux audio studio built with Rust and iced. Features multitrack recording, mixing, CLAP/LV2 plugin hosting, offline local AI voice cloning, and a 14-tool Model Context Protocol (MCP) server. Apache-2.0.
+  - Repository: https://github.com/zvirox/audio-labs-pro
+- [Screen Studio Pro (SSP)](https://zvirox.in/projects/ssp/): Planned open-source Wayland screen recorder for Linux with a frosted-glass UI, PipeWire capture, webcam picture-in-picture, and hardware-first encoding. Currently in specification phase. MIT.
+  - Repository: https://github.com/zvirox/screen-studio-pro
+- [Your TV Friend (YTF)](https://zvirox.in/projects/ytf/): v0.0.3 Android TV non-destructive debloater and native television launcher (Your UI). Disables OEM bloatware reversibly via ADB without root. Features 5 customizable visual themes, 26 languages, and 297 catalogued device profiles. MIT.
+  - Repository: https://github.com/zvirox/your-tv-friend
+
+## Core Technical Guides & Architecture Notes
+
+- [Voice & Audio AI](https://zvirox.in/categories/voice-audio-ai/): Local voice cloning, text-to-speech, and audio privacy.
+  - [VoiceStudio Review](https://zvirox.in/voice-audio-ai/voicestudio-review-local-ai-voice-cloning/): Hands-on review of offline voice cloning in 646 languages.
+  - [Running Voice AI Locally](https://zvirox.in/voice-audio-ai/running-voice-ai-locally-privacy-first-tts/): Privacy-first alternatives to cloud TTS engines.
+  - [From ElevenLabs to VoiceStudio](https://zvirox.in/voice-audio-ai/from-elevenlabs-to-voicestudio-migration-guide/): On-premises voice cloning migration guide.
+- [AI & Coding Agents](https://zvirox.in/categories/ai/): Model-agnostic workflows and AI agents.
+  - [Kilo AI vs Cursor](https://zvirox.in/ai/kilo-ai-vs-cursor-open-source-coding-agent/): Model-agnostic AI coding agent comparison with BYOK.
+  - [AI Coding Agents in 2026](https://zvirox.in/ai/ai-coding-agents-2026-model-agnostic-byok/): State of agentic development and local models.
+- [Linux Systems & Networking](https://zvirox.in/categories/linux/):
+  - [What Is SSH?](https://zvirox.in/linux/what-is-ssh/): Secure Shell fundamentals, cryptographic key pairs, and hardening.
+  - [What Is DNS?](https://zvirox.in/networking/what-is-dns/): Recursive and authoritative DNS resolution architecture.
+  - [What Is DHCP?](https://zvirox.in/networking/what-is-dhcp/): DORA protocol and dynamic address leasing.
+  - [What Is the OSI Model?](https://zvirox.in/networking/what-is-osi-model/): 7-layer networking architecture.
+
+## Governance & Legal
+
+- [Licensing Overview](https://zvirox.in/licensing/): Per-project open-source licenses and commercial terms.
+- [Privacy Policy](https://zvirox.in/privacy/): Strict zero-telemetry policy and India DPDP Act 2023 compliance framing.
+- [Terms of Use](https://zvirox.in/terms/): Terms for code and website content.
+- [Cookie Policy](https://zvirox.in/cookies/): Zero tracking cookies; browser localStorage used strictly for theme preference.
+- [HTML Sitemap](https://zvirox.in/sitemap/): Visual index of all site pages.
+- [XML Sitemap](https://zvirox.in/sitemap/sitemap.xml): Search engine index for Google Search Console.

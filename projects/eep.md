@@ -3,7 +3,27 @@ layout: default
 title: Easy Edits Pro | Zvirox
 description: An alpha-stage Linux desktop video editor built with Rust, Tauri, React, and GStreamer. Combines multitrack editing with a Rust-owned project model.
 permalink: /projects/eep/
+image: "/assets/images/projects/easy-edits-pro-mockup.png"
 ---
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Easy Edits Pro",
+  "operatingSystem": "Linux",
+  "applicationCategory": "MultimediaApplication",
+  "description": "An alpha-stage Linux desktop video editor built with Rust, Tauri, React, and GStreamer. Combines multitrack editing with a Rust-owned project model and Model Context Protocol (MCP) automation.",
+  "url": "https://zvirox.in/projects/eep/",
+  "downloadUrl": "https://github.com/zvirox/easy-edits-pro/releases",
+  "license": "https://www.gnu.org/licenses/agpl-3.0.html",
+  "author": {
+    "@type": "Person",
+    "name": "Prakashpuri Gauswami",
+    "url": "https://zvirox.in/about/"
+  }
+}
+</script>
 
 <div class="zv-container">
 
@@ -22,7 +42,7 @@ permalink: /projects/eep/
         </div>
       </header>
             <figure class="zv-project-visual">
-        <img class="zv-project-image" src="{{ '/assets/images/projects/easy-edits-pro-mockup.png' | relative_url }}" alt="Conceptual Easy Edits Pro video editor with a mountain lake preview, media bin, inspector, and multitrack timeline." decoding="async">
+        <img class="zv-project-image" src="{{ '/assets/images/projects/easy-edits-pro-mockup.png' | relative_url }}" alt="Conceptual Easy Edits Pro video editor with a mountain lake preview, media bin, inspector, and multitrack timeline." width="1200" height="675" loading="lazy" decoding="async">
         <figcaption class="zv-project-caption">Concept mockup based on Easy Edits Pro's video editing workspaces.</figcaption>
       </figure>
     </section>

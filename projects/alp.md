@@ -3,7 +3,27 @@ layout: default
 title: Audio Labs Pro | Zvirox
 description: A Linux audio studio built with Rust for multitrack recording, editing, mixing, and export, with offline AI voice tools, dictation, and CLAP/LV2 hosting.
 permalink: /projects/alp/
+image: "/assets/images/projects/audio-labs-pro-mockup.png"
 ---
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Audio Labs Pro",
+  "operatingSystem": "Linux",
+  "applicationCategory": "AudioApplication",
+  "description": "A Linux audio studio built with Rust for multitrack recording, editing, mixing, and export, with offline AI voice tools, dictation, voice profiles, and CLAP/LV2 plugin hosting.",
+  "url": "https://zvirox.in/projects/alp/",
+  "downloadUrl": "https://github.com/zvirox/audio-labs-pro/releases",
+  "license": "https://www.apache.org/licenses/LICENSE-2.0",
+  "author": {
+    "@type": "Person",
+    "name": "Prakashpuri Gauswami",
+    "url": "https://zvirox.in/about/"
+  }
+}
+</script>
 
 <div class="zv-container">
 
@@ -22,7 +42,7 @@ permalink: /projects/alp/
         </div>
       </header>
             <figure class="zv-project-visual">
-        <img class="zv-project-image" src="{{ '/assets/images/projects/audio-labs-pro-mockup.png' | relative_url }}" alt="Conceptual Audio Labs Pro Stories workspace with a multitrack audio timeline, seven workspace rail, docked transport, and voice effects inspector." decoding="async">
+        <img class="zv-project-image" src="{{ '/assets/images/projects/audio-labs-pro-mockup.png' | relative_url }}" alt="Conceptual Audio Labs Pro Stories workspace with a multitrack audio timeline, seven workspace rail, docked transport, and voice effects inspector." width="1200" height="675" loading="lazy" decoding="async">
         <figcaption class="zv-project-caption">Concept mockup inspired by Audio Labs Pro's seven-workspace glass interface.</figcaption>
       </figure>
     </section>

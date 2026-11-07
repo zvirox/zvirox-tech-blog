@@ -8,6 +8,22 @@ author: "Prakashpuri Gauswami"
 email: "info@zvirox.in"
 repository: "zvirox/zvirox-tech-dev"
 
+logo: "/assets/images/zvirox-logo.png"
+image: "/assets/images/zvirox-logo.png"
+
+social:
+  name: "Zvirox"
+  links:
+    - "https://github.com/zvirox"
+    - "https://github.com/zvirox/easy-edits-pro"
+    - "https://github.com/zvirox/audio-labs-pro"
+    - "https://github.com/zvirox/screen-studio-pro"
+    - "https://github.com/zvirox/your-tv-friend"
+
+twitter:
+  card: "summary_large_image"
+
+
 plugins:
   - jekyll-feed
   - jekyll-sitemap
